@@ -1,14 +1,14 @@
 ---
-title:
+title: 'Central Hallstr&ouml;m Node - Subject: Set'
 description: 'The Digital CV of Set Hallstr&ouml;m, a multi-disciplanry Artist, a Free Software advocate and Community Manager.'
 keywords: Set, Hallstr&ouml;m, "Web-Development", Design, Audio, humanoid, crosshumanist, crosshumanism
-image: 
+image: /assets/img/sethllastrom.png
 ---
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>Central Hallstr&ouml;m Node - Subject: Set</title>
+  <title>{{ page.title }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
   <meta name='robots' content='index'/>
@@ -16,11 +16,11 @@ image:
   <meta name="keywords" content="{{ page.keywords }} ">
   <meta name="dc.date.modified" scheme="ISO8601" content="2018-03-13T00:17:15+01:00" />
   <meta name="date" content="2018-02-17" scheme="YYYY-MM-DD">
-  <meta property="og:image" content="https://set.hallstrom.ch/sethllastrom.png" />
-  <meta property="twitter:image" content="https://set.hallstrom.ch/sethllastrom.png" />
-  <meta property="og:title" content="Central Hallstr&ouml;m Node - Subject: Set" />
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+  <meta property="twitter:image" content="{{ site.url }}{{ page.image }}" />
+  <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:site_name" content="Set Hallstr&ouml;m" />
-  <meta property="og:description" content="The Digital CV of Set Hallstr&ouml;m, a multi-disciplanry Artist, a Free Software advocate and Community Manager." />
+  <meta property="og:description" content="{{ page.description }}" />
   <meta property="og:url" content="https://set.hallstrom.ch" />
   <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
 

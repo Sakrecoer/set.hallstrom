@@ -1,11 +1,11 @@
 /*! sakrecoer sheet */
 @font-face {
  font-family: avant;
- src: url('free_avantgarde.woff');
+ src: url('../fonts/free_avantgarde.woff');
 }
 @font-face {
  font-family: avantB;
- src: url('free_avantgardeBOLD.woff');
+ src: url('../fonts/free_avantgardeBOLD.woff');
 }
 body {
   line-height: 1.5em;
