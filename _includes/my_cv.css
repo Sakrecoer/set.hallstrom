@@ -50,11 +50,14 @@ a:focus {
 a,
 a:link,
 a:visited {
+  transition-property: hover;
 -webkit-transition-property: hover;
  -webkit-transition: text-shadow 0.05s ease-in-out;
  -moz-transition: text-shadow 0.05s linear 0s; /* firefox 4 */
+ transition: text-shadow 0.05s ease-in-out;
   -o-transition-property: text-shadow; /* opera 10.5 */
   -o-transition-duration: 0.05s;
+  transition-duration: 0.05s;
 }
 
 a:hover {
