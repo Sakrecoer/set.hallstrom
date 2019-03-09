@@ -13,7 +13,7 @@ var m_cam       = require("camera_anim");
  */
 exports.init = function() {
     m_app.init({
-        canvas_container_id: "main_canvas_container",
+        canvas_container_id: "navigation",
         callback: init_cb,
         show_fps: false,
         console_verbose: true,
