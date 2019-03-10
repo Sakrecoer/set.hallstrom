@@ -46,7 +46,7 @@ function init_cb(canvas_elem, success) {
  * load the scene data
  */
 function load() {
-    m_data.load("my_cv.json", load_cb);
+    m_data.load("/my_cv.json", load_cb);
 }
 
 /**
