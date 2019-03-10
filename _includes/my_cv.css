@@ -1,16 +1,18 @@
 /*! sakrecoer sheet */
 @font-face {
- font-family: avant;
- src: url('../fonts/free_avantgarde.woff');
+  font-family: avant;
+  src: url('../fonts/free_avantgarde.woff');
 }
 @font-face {
- font-family: avantB;
- src: url('../fonts/free_avantgardeBOLD.woff');
+  font-family: avantB;
+  src: url('../fonts/free_avantgardeBOLD.woff');
 }
 body {
   line-height: 1.5em;
   background-color: #fff;
-  padding: 0;
+  padding: 5px;
+  overflow-x: hidden;
+  width: 100%;
   margin: 0;
   font-size: 1em;
   font-family: avant, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -22,9 +24,21 @@ h3,
 h4,
 b,
 strong {
- font-family: avantB, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+  font-family: avantB, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+h1,
+h2,
+h3,
+h4 {
+  text-shadow: 2px 2px rgba(255, 0, 0, 0.5), -2px -2px rgba(0, 153, 255, 0.5);
+}
+a h1:hover,
+a h2:hover,
+a h3,
+a h4 {
+  text-shadow: none;
+}
+
 h1{
   font-size: 3em;
   line-height: 1em;
@@ -44,62 +58,68 @@ a:visited,
 a:hover,
 a:active,
 a:focus {
- text-decoration: underline;
- color: #333;
+  text-decoration: none;
+  color: #333;
 }
 a,
 a:link,
 a:visited {
   transition-property: hover;
--webkit-transition-property: hover;
- -webkit-transition: text-shadow 0.05s ease-in-out;
- -moz-transition: text-shadow 0.05s linear 0s; /* firefox 4 */
- transition: text-shadow 0.05s ease-in-out;
+  -webkit-transition-property: hover;
+  -webkit-transition: text-shadow 0.05s ease-in-out;
+  -moz-transition: text-shadow 0.05s linear 0s; /* firefox 4 */
+  transition: text-shadow 0.05s ease-in-out;
   -o-transition-property: text-shadow; /* opera 10.5 */
   -o-transition-duration: 0.05s;
   transition-duration: 0.05s;
 }
 
 a:hover {
-text-shadow: 1px 1px rgba(255, 0, 0, 0.5), -1px -1px rgba(0, 153, 255, 0.5);
+  text-shadow: none;
 }
 a:active {
- color: rgb(55, 171, 200);
+  color: rgb(55, 171, 200);
 }
 /*
  * blend4web
  */
 
- #main_canvas_container {
-     position: absolute;
-     left: 0px;
-     top: 0px;
-     width: 100%;
-     height: 50%;
+#navigation {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 30%;
+  background-color: lightskyblue;
+  background-color: #1fc8db;
+  background-image: url(../img/error.gif);
+  background-size: cover;
+  overflow-x: hidden;
 
  }
  /*
   * Layout
   */
 
-#contain {
+#content {
   position: absolute;
-  top: 51%;
+  top: 31%;
   left:0;
   width: 100%;
-  padding: 0 5px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .column {
-  width: 49%;
   min-width:350px;
-  float:left;
+  flex: 1 1 400px;
 }
 #footer {
-  position: absolute;
-  top: 200%;
+  position: static;
+  bottom: 0;
   width:100%;
   height: 5%;
   font-size: .6em;
-  padding: 0 5px;
+  padding: 0px;
   line-height: 1em;
 }
