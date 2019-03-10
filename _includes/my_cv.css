@@ -7,10 +7,14 @@
   font-family: avantB;
   src: url('../fonts/free_avantgardeBOLD.woff');
 }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 body {
   line-height: 1.5em;
   background-color: #fff;
-  padding: 5px;
   overflow-x: hidden;
   width: 100%;
   margin: 0;
@@ -84,27 +88,33 @@ a:active {
  * blend4web
  */
 
-#navigation {
-  position: absolute;
-  left: 0px;
-  top: 0px;
+#banner {
   width: 100%;
   height: 30%;
   background-color: lightskyblue;
   background-color: #1fc8db;
   background-image: url(../img/error.gif);
   background-size: cover;
-  overflow-x: hidden;
 
  }
+
+ 
  /*
   * Layout
   */
 
+
+#navigation {
+  position: relative;
+  height: 23px;
+  width: 100%;
+  background: linear-gradient(293deg, #bb00ff50, #00e5ff4b, #00e5ff46);
+
+}
+
+
 #content {
-  position: absolute;
-  top: 31%;
-  left:0;
+
   width: 100%;
   padding: 5px;
   display: flex;
@@ -115,10 +125,8 @@ a:active {
   flex: 1 1 400px;
 }
 #footer {
-  position: absolute;
-  bottom: -100px;
   width:100%;
-  height: 5%;
+  height: 230px;
   font-size: .6em;
   padding: 0px;
   line-height: 1em;
