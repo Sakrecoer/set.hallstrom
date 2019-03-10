@@ -102,7 +102,15 @@ a:active {
  /*
   * Layout
   */
+#header {
+  width: 100%;
+  height: 30%;
+  background-color: lightskyblue;
+  background-color: #1fc8db;
+  background-image: url(../img/error.gif);
+  background-size: cover;
 
+  }
 
 #navigation {
   position: relative;
@@ -121,6 +129,7 @@ a:active {
 .column {
   min-width:350px;
   flex: 1 1 400px;
+  padding: 5px;
 }
 #footer {
   width:100%;
