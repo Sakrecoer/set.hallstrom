@@ -24,10 +24,11 @@
 </head>
 
 <body>
-
-<div id="banner">
-  
-</div>
+{% if page.url == "/" %}
+<div id="banner"> </div>
+{% else %}
+<a href="/"><div id="header"> </div></a>
+{% endif %}
 <div id="navigation">
   asd aksda | asdlaksdnalskd | lajasdbalsd
 </div>
