@@ -108,7 +108,7 @@ a:active {
   position: relative;
   height: 23px;
   width: 100%;
-  background: linear-gradient(293deg, #bb00ff50, #00e5ff4b, #00e5ff46);
+  background: linear-gradient(293deg, rgba(187, 0, 255, 0.314), rgba(0, 229, 255, 0.294), rgba(0, 229, 255, 0.275));
 
 }
 
