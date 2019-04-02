@@ -138,6 +138,8 @@ a:active {
   font-size: .6em;
   padding: 0;
   line-height: 1em;
+  display: flex;
+  flex-wrap: wrap;
   /* background: linear-gradient(293deg, rgba(255, 0, 0, 0.25), rgba(0, 153, 255, 0.25)); */
 }
 #footer p {
