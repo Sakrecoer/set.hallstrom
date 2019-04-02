@@ -129,7 +129,7 @@ a:active {
 .column {
   min-width:350px;
   flex: 1 1 400px;
-  margin: 5px;
+  margin: 0;
 }
 #footer {
   width:100%;
@@ -140,5 +140,5 @@ a:active {
   /* background: linear-gradient(293deg, rgba(255, 0, 0, 0.25), rgba(0, 153, 255, 0.25)); */
 }
 #footer p {
-  padding: 10px;
+  margin: 0px;
 }
