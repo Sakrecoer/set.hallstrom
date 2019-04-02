@@ -122,14 +122,14 @@ a:active {
 #content {
 
   width: 100%;
-  padding: 5px;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
 .column {
   min-width:350px;
   flex: 1 1 400px;
-  padding: 5px;
+  margin: 5px;
 }
 #footer {
   width:100%;
