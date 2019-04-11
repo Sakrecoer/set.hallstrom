@@ -2,19 +2,7 @@
 <html>
 
 <head>
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
-  <meta name='robots' content='index' />
-  <meta name="description" content="{{ page.description }}" />
-  <meta name="dc.date.modified" scheme="ISO8601" content="2018-03-13T00:17:15+01:00" />
-  <meta name="date" content="2018-02-17" scheme="YYYY-MM-DD" />
-  <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
-  <meta property="twitter:image" content="{{ site.url }}{{ page.image }}" />
-  <meta property="og:title" content="{{ page.title }}" />
-  <meta property="og:site_name" content="Set Hallström" />
-  <meta property="og:description" content="{{ page.description }}" />
-  <meta property="og:url" content="https://set.hallstrom.ch" />
+{% include metahead.html %}
   <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
 
   <script type="text/javascript" src="/assets/js/b4w.min.js"></script>
