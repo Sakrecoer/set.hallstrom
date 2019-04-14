@@ -42,7 +42,6 @@ a h4 {
 h1{
   font-size: 3em;
   line-height: 1em;
-  text-shadow: 2px 2px rgba(255, 0, 0, 0.5), -2px -2px rgba(0, 153, 255, 0.5);
   text-transform: uppercase;
 }
 h2{
@@ -156,8 +155,10 @@ a:active {
 }
 .column {
   min-width:350px;
+  max-width: 50%;
   flex: 1 1 400px;
   margin-left:5px;
+  margin-right: 5px;
 }
 #footer {
   width:100%;
@@ -173,16 +174,12 @@ a:active {
   margin-left: 5px;
 }
 
-.contact {
-  width: 95%;
-  max-width:500px;
-}
 .textspace {
   height: 100px;
 } 
 
 input[type=text], input[type=email], textarea, select {
-  width: 95%;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -193,8 +190,7 @@ input[type=text], input[type=email], textarea, select {
 
 
 input[type=submit] {
-  width: 95%;
-  max-width: 500px;
+  width: 200px;
   background: linear-gradient(223deg, #0f73ff, #ff00b2, #95d4a3, #f5ba00);
   background-size: 800% 800%;
   
