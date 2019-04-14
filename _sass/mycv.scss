@@ -48,6 +48,7 @@ h1{
 h2{
   font-size: 2em;
   line-height: 1em;
+  text-transform: uppercase;
 
 }
 p{
@@ -69,6 +70,11 @@ a:focus {
 }
 a:hover {
   text-shadow: none;
+  -webkit-transition: text-shadow 0.2s linear;
+  -moz-transition: text-shadow 0.2s linear;
+  -ms-transition: text-shadow 0.2s linear;
+  -o-transition: text-shadow 0.2s linear;
+  transition: text-shadow 0.2s linear;
 }
 a:active {
   color: rgb(55, 171, 200);
@@ -83,9 +89,9 @@ a:active {
   background: linear-gradient(223deg, #0f73ff, #ff00b2, #95d4a3, #f5ba00);
   background-size: 800% 800%;
   
-  -webkit-animation: AnimationName 18s ease infinite;
-  -moz-animation: AnimationName 18s ease infinite;
-  animation: AnimationName 18s ease infinite;
+  -webkit-animation: AnimationName 58s ease infinite;
+  -moz-animation: AnimationName 58s ease infinite;
+  animation: AnimationName 58s ease infinite;
   
   @-webkit-keyframes AnimationName {
       0%{background-position:92% 0%}
@@ -114,9 +120,9 @@ a:active {
   background: linear-gradient(223deg, #0f73ff, #ff00b2, #95d4a3, #f5ba00);
   background-size: 800% 800%;
   
-  -webkit-animation: AnimationName 8s ease infinite;
-  -moz-animation: AnimationName 8s ease infinite;
-  animation: AnimationName 8s ease infinite;
+  -webkit-animation: AnimationName 58s ease infinite;
+  -moz-animation: AnimationName 58s ease infinite;
+  animation: AnimationName 58s ease infinite;
   
   @-webkit-keyframes AnimationName {
       0%{background-position:92% 0%}
@@ -169,13 +175,14 @@ a:active {
 
 .contact {
   width: 95%;
+  max-width:500px;
 }
 .textspace {
   height: 100px;
 } 
 
-input[type=text], input[type=email], select {
-  width: 100%;
+input[type=text], input[type=email], textarea, select {
+  width: 95%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -183,21 +190,17 @@ input[type=text], input[type=email], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-input[type=checkbox] {
-  appearance: none;
-  width:50px;
-  height: 50px;
-  border-radius: 4px;
-}
+
 
 input[type=submit] {
-  width: 100%;
+  width: 95%;
+  max-width: 500px;
   background: linear-gradient(223deg, #0f73ff, #ff00b2, #95d4a3, #f5ba00);
   background-size: 800% 800%;
   
-  -webkit-animation: AnimationName 8s ease infinite;
-  -moz-animation: AnimationName 8s ease infinite;
-  animation: AnimationName 8s ease infinite;
+  -webkit-animation: AnimationName 58s ease infinite;
+  -moz-animation: AnimationName 58s ease infinite;
+  animation: AnimationName 58s ease infinite;
   
   @-webkit-keyframes AnimationName {
       0%{background-position:92% 0%}
@@ -226,9 +229,9 @@ input[type=submit]:hover {
   background: linear-gradient(223deg, #f5ba00,  #ff00b2, #0f73ff, #95d4a3);
   background-size: 800% 800%;
   
-  -webkit-animation: AnimationName 8s ease infinite;
-  -moz-animation: AnimationName 8s ease infinite;
-  animation: AnimationName 8s ease infinite;
+  -webkit-animation: AnimationName 58s ease infinite;
+  -moz-animation: AnimationName 58s ease infinite;
+  animation: AnimationName 58s ease infinite;
   
   @-webkit-keyframes AnimationName {
       0%{background-position:92% 0%}
