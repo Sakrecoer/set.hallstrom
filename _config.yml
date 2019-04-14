@@ -65,7 +65,12 @@ permalink: /:categories/:year/:month/:day/:title/
 
 timezone: Europe/Stockholm
 
-# defaults:
+defaults:
+  -
+    scope:
+      path:            "*.pdf"
+    values:
+      sitemap:         false
 #   - scope:
 #       path: ""
 #       type: "pages"
