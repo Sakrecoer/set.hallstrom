@@ -25,21 +25,28 @@ layout: default
   <div id="contact">
   <form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
     <div>
+      <h2>Drop me a line!</h2>
       <input type="hidden" name="_to" value="set.hallstrom+website@gmail.com"><br />
       <input type="text" name="_gotcha" style="display: none;">
     </div>
     <div>
-      <label for="name">Name</label><br />
-      <input type="text" name="name" id="name" placeholder="Enter your name...">
+      <label for="name" style="display: none;">Name</label><br />
+      <input type="text" name="name" id="name" placeholder="Enter your name..." class="contact">
     </div>
     <div>
-      <label for="email">Email Address</label><br />
-      <input type="email" name="email" id="email" placeholder="Enter your email..." required>
+      <label for="email" style="display: none;">Email Address</label><br />
+      <input type="email" name="email" id="email" placeholder="Enter your email..." required class="contact">
     </div>
     <div>
-      <label for="message">Message</label><br />
-      <textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+      <label for="message" style="display: none;">Message</label><br />
+      <textarea name="message" id="message" placeholder="Enter your message..." required class="contact textspace"></textarea>
     </div>
+    <div>
+      <input type="checkbox" name="consent" id="consent" required class="checkthis">By checking this box you understand that i will recieve your email address.
+    </div>
+    <div>
+        <input type="checkbox" name="news" id="news">Check this box if you would like to recieve news from me
+      </div>
     <div>
       <input type="submit" value="Send Message">
     </div>
