@@ -11,11 +11,38 @@ layout: default
   <h1>Set Hallstr&ouml;m</h1>
   <p>The Digital CV of Set Hallstr&ouml;m, Multidisciplinary humanoid, Free Software advocate and Community Manager.</p>
   <p><a target="_blank" href="https://www.enrenarevardag.se">Currently Working at Enrenare Vardag AB</a></p>
-  <p><b>set [at] hallstrom [dot] ch</b><br /><a target="_blank" href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0xD9C5664DC74D7E67">C3FA A64A 86C5 B9A7 7B27 DCDA D9C5 664D C74D 7E67</a><br /><a href="tel:+46708134377"><b>+46 708 134 377</b></a></p>
+  <p><b>set [at] hallstrom [dot] ch</b><br /><a target="_blank"
+      href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0xD9C5664DC74D7E67">C3FA A64A 86C5 B9A7 7B27 DCDA
+      D9C5 664D C74D 7E67</a><br /><a href="tel:+46708134377"><b>+46 708 134 377</b></a></p>
 </div>
-  <div class="column editable">
-    <h2><a target="_blank" href="set_hallstrom20180313.pdf">CV / Porfolio</a></h2>
-    <h2><a target="_blank" href="https://sakrecoer.com/music/">Music</a></h2>
-    <h2><a target="_blank" href="https://basspistol.com">Network</a></h2>
-    <h2><a target="_blank" href="https://www.linkedin.com/in/set-hallstrom/">Botnet</a></h2>
-  </div>
+<div class="column editable">
+  <h2><a target="_blank" href="set_hallstrom20180313.pdf">CV / Porfolio</a></h2>
+  <h2><a target="_blank" href="https://sakrecoer.com/music/">Music</a></h2>
+  <h2><a target="_blank" href="https://basspistol.com">Network</a></h2>
+  <h2><a target="_blank" href="https://www.linkedin.com/in/set-hallstrom/">Botnet</a></h2>
+</div>
+<div class="column">
+  <div id="contact">
+  <form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
+    <div>
+      <input type="hidden" name="_to" value="public+setwebsite@hallstrom.ch"><br />
+      <input type="text" name="_gotcha" style="display: none;">
+    </div>
+    <div>
+      <label for="name">Name</label><br />
+      <input type="text" name="name" id="name" placeholder="Enter your name...">
+    </div>
+    <div>
+      <label for="email">Email Address</label><br />
+      <input type="email" name="email" id="email" placeholder="Enter your email..." required>
+    </div>
+    <div>
+      <label for="message">Message</label><br />
+      <textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Send Message">
+    </div>
+  </form>
+</div>
+</div>
