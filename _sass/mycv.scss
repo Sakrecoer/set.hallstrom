@@ -31,13 +31,7 @@ b,
 strong {
   font-family: avantB, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-h1,
-h2,
-h3,
-h4 {
-  text-shadow: 2px 2px rgba(255, 0, 0, 0.5), -2px -2px rgba(0, 153, 255, 0.5);
- 
-}
+
 a h1:hover,
 a h2:hover,
 a h3,
@@ -64,6 +58,7 @@ a:visited,
 a:hover,
 a:active,
 a:focus {
+  text-shadow: 2px 2px rgba(255, 0, 0, 0.5), -2px -2px rgba(0, 153, 255, 0.5);
   text-decoration: none;
   color: #333;
   -webkit-transition: text-shadow 0.2s linear;
@@ -85,11 +80,28 @@ a:active {
 #banner {
   width: 100%;
   height: 50%;
-  background-color: lightskyblue;
-  background-color: #1fc8db;
-  background-image: url(../img/error.gif);
-  background-size: cover;
-
+  background: linear-gradient(223deg, #0f73ff, #ff00b2, #95d4a3, #f5ba00);
+  background-size: 800% 800%;
+  
+  -webkit-animation: AnimationName 8s ease infinite;
+  -moz-animation: AnimationName 8s ease infinite;
+  animation: AnimationName 8s ease infinite;
+  
+  @-webkit-keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
  }
 
  
@@ -143,5 +155,5 @@ a:active {
   width: 95%;
 }
 .textspace {
-  height: 300px;
+  height: 100px;
 }
