@@ -111,12 +111,29 @@ a:active {
 #header {
   width: 100%;
   height: 30%;
-  background-color: lightskyblue;
-  background-color: #1fc8db;
-  background-image: url(../img/error.gif);
-  background-size: cover;
-
+  background: linear-gradient(223deg, #0f73ff, #ff00b2, #95d4a3, #f5ba00);
+  background-size: 800% 800%;
+  
+  -webkit-animation: AnimationName 8s ease infinite;
+  -moz-animation: AnimationName 8s ease infinite;
+  animation: AnimationName 8s ease infinite;
+  
+  @-webkit-keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
   }
+  @-moz-keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
+}
 
 #navigation {
   position: relative;
@@ -126,7 +143,6 @@ a:active {
 
 
 #content {
-
   width: 100%;
   padding: 0;
   display: flex;
@@ -156,4 +172,77 @@ a:active {
 }
 .textspace {
   height: 100px;
+} 
+
+input[type=text], input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=checkbox] {
+  appearance: none;
+  width:50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+input[type=submit] {
+  width: 100%;
+  background: linear-gradient(223deg, #0f73ff, #ff00b2, #95d4a3, #f5ba00);
+  background-size: 800% 800%;
+  
+  -webkit-animation: AnimationName 8s ease infinite;
+  -moz-animation: AnimationName 8s ease infinite;
+  animation: AnimationName 8s ease infinite;
+  
+  @-webkit-keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background: linear-gradient(223deg, #f5ba00,  #ff00b2, #0f73ff, #95d4a3);
+  background-size: 800% 800%;
+  
+  -webkit-animation: AnimationName 8s ease infinite;
+  -moz-animation: AnimationName 8s ease infinite;
+  animation: AnimationName 8s ease infinite;
+  
+  @-webkit-keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:92% 0%}
+      50%{background-position:9% 100%}
+      100%{background-position:92% 0%}
+  }
 }
