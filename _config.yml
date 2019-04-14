@@ -23,7 +23,8 @@ instagram_username: 'sethybwoy'
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
 description: >- # this means to ignore newlines until "baseurl:"
-  'Super description'
+  'The Digital CV of Set Hallstrom, a multi-disciplanry Artist, a Free Software
+  advocate and Community Manager.'
 author:
   name: Set Hallstrom
   email: set@hallstrom.ch 
