@@ -6,11 +6,12 @@ description: >-
 image: /siteicon.png
 layout: default
 ---
+
 <div class="column">
   <h1>{{ site.title }}</h1>
   <h2>{{ page.description }}</h2>
   <div class="editable">
-    <h3>Currently Working at <a target="_blank" href="https://www.enrenarevardag.se">Enrenare Vardag AB</a></h3>
+    <h3>Currently @&nbsp;<a target="_blank" style="font-size: 1em;" href="/">Enrenare Vardag AB</a></h3>
     <h3>set [at] hallstrom [dot] ch</h3>
     <h3><a target="_blank" href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0xD9C5664DC74D7E67">C3FA A64A 86C5 B9A7 7B27 DCDA D9C5 664D C74D 7E67</a></h3>
     <h3><a href="tel:+46708134377"><b>+46 708 134 377</b></a></h3>
@@ -25,31 +26,30 @@ layout: default
     <form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
       <div>
         <h1>Drop me a line!</h1>
-        <input type="hidden" name="_to" value="set.hallstrom+website@gmail.com"><br />
-        <input type="text" name="_gotcha" style="display: none;">
+        <input type="hidden" name="_to" value="set.hallstrom+website@gmail.com" /><br />
+        <input type="text" name="_gotcha" style="display: none;" />
       </div>
       <div>
         <label for="name" style="display: none;">Name</label><br />
-        <input type="text" name="name" id="name" placeholder="Enter your name..." class="contact">
+        <input type="text" name="name" id="name" placeholder="Enter your name..." class="contact" />
       </div>
       <div>
         <label for="email" style="display: none;">Email Address</label><br />
-        <input type="email" name="email" id="email" placeholder="Enter your email..." required class="contact">
+        <input type="email" name="email" id="email" placeholder="Enter your email..." required class="contact" />
       </div>
       <div>
         <label for="message" style="display: none;">Message</label><br />
-        <textarea name="message" id="message" placeholder="Enter your message..." required
-          class="contact textspace"></textarea>
+        <textarea name="message" id="message" placeholder="Enter your message..." required class="contact textspace"></textarea>
       </div>
       <div>
-        <input type="checkbox" name="consent" id="consent" required class="checkthis">By checking this box you
+        <input type="checkbox" name="consent" id="consent" required class="checkthis" />By checking this box you
         understand that i will recieve your email address.
       </div>
       <div>
-        <input type="checkbox" name="news" id="news">Check this box if you would like to recieve news from me
+        <input type="checkbox" name="news" id="news" />Check this box if you would like to recieve news from me
       </div>
       <div>
-        <input type="submit" value="Send Message">
+        <input type="submit" value="Send Message" />
       </div>
     </form>
   </div>
