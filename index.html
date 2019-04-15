@@ -7,15 +7,54 @@ image: /siteicon.png
 layout: default
 ---
 
-<div class="column editable">
-  <h1>Set Hallstr&ouml;m</h1>
-  <p>The Digital CV of Set Hallstr&ouml;m, Multidisciplinary humanoid, Free Software advocate and Community Manager.</p>
-  <p><a target="_blank" href="https://www.enrenarevardag.se">Currently Working at Enrenare Vardag AB</a></p>
-  <p><b>set [at] hallstrom [dot] ch</b><br /><a target="_blank" href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0xD9C5664DC74D7E67">C3FA A64A 86C5 B9A7 7B27 DCDA D9C5 664D C74D 7E67</a><br /><a href="tel:+46708134377"><b>+46 708 134 377</b></a></p>
-</div>
-  <div class="column editable">
-    <h2><a target="_blank" href="set_hallstrom20180313.pdf">CV / Porfolio</a></h2>
-    <h2><a target="_blank" href="https://sakrecoer.com/music/">Music</a></h2>
-    <h2><a target="_blank" href="https://basspistol.com">Network</a></h2>
-    <h2><a target="_blank" href="https://www.linkedin.com/in/set-hallstrom/">Botnet</a></h2>
+<div class="column">
+  <h1>{{ site.title }}</h1>
+  <h2>{{ page.description }}</h2>
+  <div class="editable">
+    <h3>Currently @&nbsp;<a target="_blank" style="font-size: 1em;" href="/" class="cc-active">Enrenare Vardag AB</a></h3>
+    <h3>set [at] hallstrom [dot] ch</h3>
+    <h3><a target="_blank" href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0xD9C5664DC74D7E67">C3FA A64A 86C5 B9A7 7B27 DCDA D9C5 664D C74D 7E67</a></h3>
+    <h3><a href="tel:+46708134377"><b>+46 708 134 377</b></a></h3>
   </div>
+</div>
+<div class="column">
+  <div class="editable">
+    <h1><a target="_blank" href="set_hallstrom20180313.pdf">CV / Portfolio</a></h1>
+    <h1><a target="_blank" href="https://sakrecoer.com/">Music</a></h1>
+    <h1><a target="_blank" href="https://terminalnet.work">Network</a></h1>
+    <h1><a target="_blank" href="https://www.linkedin.com/in/set-hallstrom/">Botnet</a></h1>
+  </div>
+</div>
+
+<div class="column">
+  <div id="contact">
+    <form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
+      <div>
+        <h1>Drop me a line!</h1>
+        <input type="hidden" name="_to" value="set.hallstrom+website@gmail.com" /><br />
+        <input type="text" name="_gotcha" style="display: none;" />
+      </div>
+      <div>
+        <label for="name" style="display: none;">Name</label><br />
+        <input type="text" name="name" id="name" placeholder="Enter your name..." class="contact" />
+      </div>
+      <div>
+        <label for="email" style="display: none;">Email Address</label><br />
+        <input type="email" name="email" id="email" placeholder="Enter your email..." required class="contact" />
+      </div>
+      <div>
+        <label for="message" style="display: none;">Message</label><br />
+        <textarea name="message" id="message" placeholder="Enter your message..." required class="contact textspace"></textarea>
+      </div>
+      <div>
+        <input type="checkbox" name="consent" id="consent" required class="css-checkbox lrg klaus" /><label for="consent" class="css-label lrg klaus">I agree with the <a href="/privacy-policy/">privacy policy.</a></label>
+      </div>
+      <div>
+        <input type="checkbox" name="news" id="news" class="css-checkbox lrg klaus" /><label for="news" class="css-label lrg klaus">Send me news!</label>
+      </div>
+      <div>
+        <input type="submit" value="Send Message" />
+      </div>
+    </form>
+  </div>
+</div>
