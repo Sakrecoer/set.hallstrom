@@ -6,28 +6,22 @@
 </head>
 
 <body>
-  {% if page.url == "/" %}
-  <div id="banner"> 
-      <div class="hero">
-        <h1>{{ site.title }}</h1>
-      </div>
-  </div>
-  {% else %}
-  
-    <div id="header">
-        <div class="hero">
-            <a href="/"><h1>{{ site.title }}</h1></a>
-        </div>
-    </div>
-  
-  {% endif %}
-  <!-- <div id="navigation"> </div> -->
-  <div id="content">
-    {{ content }}
-  </div>
 
-  {% include footer.html %}
+{% if page.url == "/" %}
+{% include hero.html %}
+{% else %}
+{% include header.html %}
+{% endif %}
 
+<!-- <div id="navigation"> </div> -->
+ 
+<div id="content">
+{{ content }}
+</div> 
+
+<div id="footer">
+{% include footer.html %}
+</div>
 </body>
 
 </html>
