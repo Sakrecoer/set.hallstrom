@@ -47,16 +47,7 @@ b,
 strong {
   font-family: avantB, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-span.stretch {
-  display:inline-block;
-  -webkit-transform:scale(0.5,6); /* Safari and Chrome */
-  -moz-transform:scale(0.5,6); /* Firefox */
-  -ms-transform:scale(0.5,6); /* IE 9 */
-  -o-transform:scale(0.5,6); /* Opera */
-  transform:scale(0.5,6); /* W3C */
-  margin-bottom: 2.4em;
-  margin-left: -150px;
-}
+
 a h1:hover,
 a h2:hover,
 a h3,
@@ -166,16 +157,7 @@ a:active {
   a:focus {
     text-shadow: none;
   }
-  span.stretch {
-    display:inline-block;
-    -webkit-transform:scale(0.5,5); /* Safari and Chrome */
-    -moz-transform:scale(0.5,5); /* Firefox */
-    -ms-transform:scale(0.5,5); /* IE 9 */
-    -o-transform:scale(0.5,5); /* Opera */
-    transform:scale(0.5,5); /* W3C */
-    margin-bottom: 2em;
-    margin-left: -125px;
-  }
+
 }
 
 #navigation {
