@@ -7,15 +7,22 @@ image: /siteicon.png
 layout: infopages
 sitemap: false
 ---
+
 # Personal Site
+
 This site is personal. I don't collect your data.
 
 # Cookies
+
 I don't use cookies. So you don't have to worry about that. Simply because:
-- Why should i track you?
-- I don't need cookies.
+
+* Why should i track you?
+* I don't need cookies.
 
 # Contact information
-When you use the contact form, the information you submitted is stored for a maximum of 30 days on my personal server. Your information will however be added to my personal contacts.
+
+When you use the contact form, the information you submitted is stored for a maximum of 30 days on my personal server. The name and e-mail you submitted will however be added to my personal contacts.
+
+# Regrets
 
 You can at anytime ask me to remove you from my personal contacts. By sending an email to set+gdpr@hallstrom.ch
