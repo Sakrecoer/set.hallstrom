@@ -25,4 +25,4 @@ When you use the contact form, the information you submitted is stored for a max
 
 ### Regrets
 
-You can at anytime ask me to remove you from my personal contacts. By sending an email to set+gdpr@hallstrom.ch
+You can at anytime ask me to remove you from my personal contacts. By sending an email to set+gdpr@hallstrom.ch. It will make me a bit sad but it's ok.
