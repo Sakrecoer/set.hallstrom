@@ -21,28 +21,12 @@ input[type=text], input[type=email], textarea, select {
 
 input[type=submit] {
   width: 200px;
-  background: linear-gradient(223deg, #0f73ff, #ff00b2, #95d4a3, #f5ba00);
+  background-image: linear-gradient(223deg, rgba(255, 0, 0, 0.5), rgba(0, 153, 255, 0.5));
   background-size: 800% 800%;
-  
   -webkit-animation: AnimationName 58s ease infinite;
   -moz-animation: AnimationName 58s ease infinite;
   animation: AnimationName 58s ease infinite;
-  
-  @-webkit-keyframes AnimationName {
-      0%{background-position:92% 0%}
-      50%{background-position:9% 100%}
-      100%{background-position:92% 0%}
-  }
-  @-moz-keyframes AnimationName {
-      0%{background-position:92% 0%}
-      50%{background-position:9% 100%}
-      100%{background-position:92% 0%}
-  }
-  @keyframes AnimationName {
-      0%{background-position:92% 0%}
-      50%{background-position:9% 100%}
-      100%{background-position:92% 0%}
-  }
+
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -52,28 +36,12 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background: linear-gradient(223deg, #f5ba00,  #ff00b2, #0f73ff, #95d4a3);
+  background-image: linear-gradient(223deg, rgba(0, 153, 255, 0.5),rgba(255, 0, 0, 0.5));
   background-size: 800% 800%;
-  
   -webkit-animation: AnimationName 58s ease infinite;
   -moz-animation: AnimationName 58s ease infinite;
   animation: AnimationName 58s ease infinite;
-  
-  @-webkit-keyframes AnimationName {
-      0%{background-position:92% 0%}
-      50%{background-position:9% 100%}
-      100%{background-position:92% 0%}
-  }
-  @-moz-keyframes AnimationName {
-      0%{background-position:92% 0%}
-      50%{background-position:9% 100%}
-      100%{background-position:92% 0%}
-  }
-  @keyframes AnimationName {
-      0%{background-position:92% 0%}
-      50%{background-position:9% 100%}
-      100%{background-position:92% 0%}
-  }
+
 }
 /* CSS Created by CSS CHECKBOX */
 /**********************************/

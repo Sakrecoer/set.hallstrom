@@ -7,11 +7,19 @@
 
 <body>
   {% if page.url == "/" %}
-  <div id="banner"> </div>
+  <div id="banner"> 
+      <div class="hero">
+        <h1><span class="stretch">{{ site.title }}</span></h1>
+      </div>
+  </div>
   {% else %}
-  <a href="/">
-    <div id="header"> </div>
-  </a>
+  
+    <div id="header">
+        <div class="hero">
+            <a href="/"><h1><span class="stretch">{{ site.title }}</span></h1></a>
+        </div>
+    </div>
+  
   {% endif %}
   <!-- <div id="navigation"> </div> -->
   <div id="content">
