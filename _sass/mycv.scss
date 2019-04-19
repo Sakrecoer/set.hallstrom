@@ -31,6 +31,9 @@ h4,
 b,
 strong {
   font-family: avantB, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: linear-gradient(90deg, rgb(255, 128, 128), rgb(120, 201, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 a h1:hover,
@@ -53,6 +56,7 @@ h2{
 }
 p{
   line-height:1.5em;
+
 }
 a:link,
 a:visited,
@@ -61,7 +65,9 @@ a:active,
 a:focus {
   text-shadow: .05em .05em rgba(255, 0, 0, 0.5), -.05em -.05em rgba(0, 153, 255, 0.5);
   text-decoration: none;
-  color: #333;
+  background: linear-gradient(90deg, rgb(255, 128, 128), rgb(120, 201, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   -webkit-transition: text-shadow 0.2s linear;
   -moz-transition: text-shadow 0.2s linear;
   -ms-transition: text-shadow 0.2s linear;
@@ -83,7 +89,7 @@ a:active {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(223deg, rgba(255, 0, 0, 0.5), rgba(0, 153, 255, 0.5));
+  background: linear-gradient(0deg, rgba(255, 0, 0, 0.5), rgba(0, 153, 255, 0.5));
   background-size: 800% 800%;
   
   -webkit-animation: AnimationName 29s ease infinite;
@@ -100,11 +106,15 @@ a:active {
   h1 {
     position: relative;
     margin-bottom: 0;
-    color: #fff;
+  background: linear-gradient(90deg, rgb(255, 128, 128), rgb(120, 201, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
     font-size: 3em;
-    -moz-animation: example 20s linear infinite; /* Safari 4.0 - 8.0 */
-    -webkit-animation: example 20s linear infinite; /* Safari 4.0 - 8.0 */
-    animation: example 20s linear infinite;
+    // text-shadow: .05em .05em rgba(255, 0, 0, 0.5), -.05em -.05em rgba(0, 153, 255, 0.5);
+    -moz-animation: example 20s linear infinite, shadow 5s infinite alternate; /* Safari 4.0 - 8.0 */
+    -webkit-animation: example 20s linear infinite, shadow 5s linear alternate; /* Safari 4.0 - 8.0 */
+    animation: example 20s linear infinite, shadow 5s linear alternate;
+
   }
 
 }
@@ -168,8 +178,6 @@ a:active {
   flex-wrap: wrap;
 }
 .column {
-  min-width:300px;
-  max-width: 50%;
   flex: 1 1 300px;
   margin-left:5px;
   margin-right: 5px;

@@ -31,3 +31,20 @@
   50%  {left:50px; bottom:0px;}
   100% {left:0px; bottom:0px;}
 }
+
+@-webkit-keyframes shadow {
+  to {
+    text-shadow: .2em .2em rgba(255, 0, 0, 0.5), -.2m -.2em rgba(0, 153, 255, 0.5);
+  }
+
+}
+@-moz-keyframes shadow {
+  to {
+    text-shadow: .2em .2em rgba(255, 0, 0, 0.5), -.2m -.2em rgba(0, 153, 255, 0.5);
+  }
+}
+
+@keyframes shadow {
+  to {text-shadow: .2em .2em rgba(255, 0, 0, 0.5), -.2m -.2em rgba(0, 153, 255, 0.5);
+  }
+}
