@@ -31,9 +31,7 @@ h4,
 b,
 strong {
   font-family: avantB, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: linear-gradient(90deg, rgb(255, 128, 128), rgb(120, 201, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
 }
 
 a h1:hover,
@@ -65,7 +63,7 @@ a:active,
 a:focus {
   text-shadow: .05em .05em rgba(255, 0, 0, 0.5), -.05em -.05em rgba(0, 153, 255, 0.5);
   text-decoration: none;
-  background: linear-gradient(90deg, rgb(255, 128, 128), rgb(120, 201, 255));
+  background: linear-gradient(97deg, rgb(255, 128, 128), rgb(120, 201, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition: text-shadow 0.2s linear;
@@ -106,14 +104,14 @@ a:active {
   h1 {
     position: relative;
     margin-bottom: 0;
-  background: linear-gradient(90deg, rgb(255, 128, 128), rgb(120, 201, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg, rgb(255, 128, 128), rgb(120, 201, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 3em;
     // text-shadow: .05em .05em rgba(255, 0, 0, 0.5), -.05em -.05em rgba(0, 153, 255, 0.5);
-    -moz-animation: example 20s linear infinite, shadow 5s infinite alternate; /* Safari 4.0 - 8.0 */
-    -webkit-animation: example 20s linear infinite, shadow 5s linear alternate; /* Safari 4.0 - 8.0 */
-    animation: example 20s linear infinite, shadow 5s linear alternate;
+    -moz-animation: example 20s linear infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation: example 20s linear infinite; /* Safari 4.0 - 8.0 */
+    animation: example 20s linear infinite;
 
   }
 
@@ -147,8 +145,11 @@ a:active {
   h1 {
     position: relative;
     margin-bottom: 0;
-    color: #fff;
+    background: linear-gradient(90deg, rgb(255, 128, 128), rgb(120, 201, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 3em;
+    // text-shadow: .05em .05em rgba(255, 0, 0, 0.5), -.05em -.05em rgba(0, 153, 255, 0.5);
     -moz-animation: example 20s linear infinite; /* Safari 4.0 - 8.0 */
     -webkit-animation: example 20s linear infinite; /* Safari 4.0 - 8.0 */
     animation: example 20s linear infinite;
