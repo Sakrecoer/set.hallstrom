@@ -74,7 +74,7 @@ a:focus {
   text-shadow: none;
 }
 a:hover {
-  text-shadow: none;
+  text-shadow: .05em .05em rgb(255, 128, 128), -.05em -.05em rgb(120, 201, 255);
   background: linear-gradient(97deg, rgb(120, 201, 255), rgb(255, 128, 128),);
   -webkit-background-clip: text;
   background-clip: text;
