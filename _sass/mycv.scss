@@ -61,19 +61,25 @@ a:visited,
 a:hover,
 a:active,
 a:focus {
-  text-shadow: .05em .05em rgba(255, 0, 0, 0.5), -.05em -.05em rgba(0, 153, 255, 0.5);
   text-decoration: none;
   background: linear-gradient(97deg, rgb(255, 128, 128), rgb(120, 201, 255));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition: text-shadow 0.2s linear;
   -moz-transition: text-shadow 0.2s linear;
   -ms-transition: text-shadow 0.2s linear;
   -o-transition: text-shadow 0.2s linear;
   transition: text-shadow 0.2s linear;
+  text-shadow: none;
 }
 a:hover {
   text-shadow: none;
+  background: linear-gradient(97deg, rgb(120, 201, 255), rgb(255, 128, 128),);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
 }
 a:active {
   color: rgb(55, 171, 200);
@@ -106,6 +112,7 @@ a:active {
     margin-bottom: 0;
     background: linear-gradient(90deg, rgb(255, 128, 128), rgb(120, 201, 255));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3em;
     // text-shadow: .05em .05em rgba(255, 0, 0, 0.5), -.05em -.05em rgba(0, 153, 255, 0.5);
@@ -147,6 +154,7 @@ a:active {
     margin-bottom: 0;
     background: linear-gradient(90deg, rgb(255, 128, 128), rgb(120, 201, 255));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3em;
     // text-shadow: .05em .05em rgba(255, 0, 0, 0.5), -.05em -.05em rgba(0, 153, 255, 0.5);
