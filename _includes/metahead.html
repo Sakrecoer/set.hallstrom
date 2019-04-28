@@ -45,7 +45,7 @@
 <meta name="twitter:title" content="{{ page.title }} | {{ site.title }}" />{% if page.url == '/' %}
 <meta name="twitter:description" content="{{ site.description | strip_html }}" />{% else %}
 <meta name="twitter:description" content="{{ page.description | strip_html }}" />{% endif %}{% if page.url == '/' %}
-<meta name="twitter:image" content="{{ site.logo }}{{ site.logo }}" />{% else %}
+<meta name="twitter:image" content="{{ site.url }}{{ site.logo }}" />{% else %}
 <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />{% endif %}
 <!-- Humans.txt authorship http://humanstxt.org 
 <link type="text/plain" rel="author" href="{{ site.url }}/humans.txt" /> 
