@@ -185,6 +185,7 @@ a:active {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 .column {
   flex: 1 1 300px;
