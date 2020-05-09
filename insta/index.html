@@ -1,4 +1,6 @@
 ---
+title: Setstagram
+description: 'My own insta, beause i can, becasue why not and because who wants the insta app on their phone?'
 ---
 {% include relBase.html %}
 <!DOCTYPE HTML>
@@ -9,7 +11,7 @@
 -->
 <html>
 <head>
-<title>{{ site.title }} - {{ page.name }}</title>
+<title>{{ site.title }} - {{ page.title }}</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="{{ relBase }}/assets/css/main_insta.css" />
@@ -19,12 +21,12 @@
 </head>
 <body class="is-preload-0 is-preload-1 is-preload-2">
 <!-- Main -->
-<div id="main">
+<div id="main" style="text-align: left;">
 
 <!-- Header -->
 <header id="header">
-  <h1>{{ site.title }}</h1>
-  <p>{{ site.description }}</p>
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.description }}</p>
 
   <ul class="icons">
     <li><a href="https://github.com/sakrecoer" rel="noopener" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
