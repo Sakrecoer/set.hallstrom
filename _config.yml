@@ -49,15 +49,10 @@ plugins:
 # Site Variables:
 
 # # collection
-# collections:
-#   tjanster:
-#     output: "true"
-#     permalink: "/tjaenster/:name/"
-#   cuttlefishes:
-#     output: "false"
-#     _hide_content: "true"
-#     _singular_name: "vi"
-#     _plural_name: "vi"
+collections:
+  images:
+    output: false
+
 
 # # defaults
 
@@ -72,78 +67,15 @@ defaults:
       path:            "*.pdf"
     values:
       sitemap:         false
-#   - scope:
-#       path: ""
-#       type: "pages"
-#     values:
-#       layout: "default"
-#       _options:
-#         image:
-#           uploads_dir: "images"
-#           width: "1280"
-#           height: "720"
-#           mime_type: "image/jpeg"
-#           resize_style: "contain"
-#         hero_image:
-#           uplaods_dir: "images"
-#           width: 1280
-#           height: 720
-#           mime_type: "image/jpeg"
-#           resize_style: "cover"
-#         content:
-#           width: "1280"
-#           height: "720"
-#           uploads_dir: "images"
-#           mime_type: "image/jpeg"
-#           resize_style: "contain"
-#   - scope:
-#       path: ""
-#       type: "tjanster"
-#     values:
-#       layout: "tjaenster"
-#       image:
-#         uploads_dir: "images/tjaenster"
-#         width: "1024"
-#         height: "340"
-#         resize_style: "cover"
-#         mime_type: "image/jpeg"
-#       content:
-#         uploads_dir: "images/tjaenster"
-#         width: "1024"
-#         height: "340"
-#         resize_style: "cover"
-#         mime_type: "image/jpeg"
-#   - scope:
-#       path: ""
-#       type: "posts"
-#     values:
-#       layout: "tjaenster"
-#       permalink: /:year/:month/:day/:title/
-#       _options:
-#         image:
-#           uploads_dir: "images/tjaenster"
-#           width: "1280"
-#           height: "550"
-#           resize_style: "cover"
-#           mime_type: "image/jpeg"
-#         content:
-#           uploads_dir: "images/tjaenster"
-#           width: "1280"
-#           height: "550"
-#           resize_style: "cover"
-#           mime_type: "image/jpeg"
-#   - scope:
-#       path: ""
-#       type: "cuttlefishes"
-#     values:
-#       _options:
-#         image:
-#           uploads_dir: "images"
-#           width: "120"
-#           height: "120"
-#           resize_style: "cover"
-#         content:
-#           uploads_dir: "images"
-#           width: "120"
-#           height: "120"
-#           resize_style: "cover"
+  -
+    scope:
+      path: ""
+      type: "images"
+    values:
+      layout: "default"
+      _options:
+        image:
+          width: 1024
+          height: 720
+          resize_style: cover
+          uploads_dir: "/photos"

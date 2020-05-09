@@ -1,0 +1,48 @@
+---
+---
+@import 'photos/libs/vars';
+@import 'photos/libs/functions';
+@import 'photos/libs/mixins';
+@import 'photos/libs/vendor';
+@import 'photos/libs/breakpoints';
+@import 'font-awesome.min.css';
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+/*
+	Lens by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+// Breakpoints.
+
+	@include breakpoints((
+		xlarge:  ( 1281px,  1680px ),
+		large:   ( 981px,   1280px ),
+		medium:  ( 737px,   980px  ),
+		small:   ( 481px,   736px  ),
+		xsmall:  ( null,    480px  )
+	));
+
+// Base.
+
+	@import 'photos/base/reset';
+	@import 'photos/base/page';
+	@import 'photos/base/typography';
+
+// Component.
+
+	@import 'photos/components/button';
+	@import 'photos/components/form';
+	@import 'photos/components/icon';
+	@import 'photos/components/list';
+	@import 'photos/components/actions';
+	@import 'photos/components/icons';
+
+// Layout.
+
+	@import 'photos/layout/main';
+	@import 'photos/layout/header';
+	@import 'photos/layout/footer';
+	@import 'photos/layout/thumbnails';
+	@import 'photos/layout/viewer';
