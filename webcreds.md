@@ -4,6 +4,7 @@ description: >-
   Information and credit regarding authors of tools, content and code used to
   build this website.
 image: /images/sincerely-media-4je5maickpg-unsplash.jpg
+layout: infopages
 ---
 
 ## CMS
