@@ -4,7 +4,15 @@
 @import 'libs/vendor';
 @import 'libs/breakpoints';
 @import 'font-awesome.min.css';
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+@font-face {
+  font-family: avant;
+  src: url('../fonts/free_avantgarde.woff');
+}
+@font-face {
+  font-family: avantB;
+  src: url('../fonts/free_avantgardeBOLD.woff');
+}
 
 /*
 	Lens by HTML5 UP
