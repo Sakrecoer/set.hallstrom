@@ -50,7 +50,7 @@ plugins:
 
 # # collection
 collections:
-  images:
+  photos:
     output: false
 
 
@@ -70,7 +70,7 @@ defaults:
   -
     scope:
       path: ""
-      type: "images"
+      type: "photos"
     values:
       layout: "default"
       _options:
