@@ -40,7 +40,8 @@ description: >-
 
 <!-- Thumbnail -->
 <section id="thumbnails">
-{% for image in site.photos %}
+{% assign sorted = (site.photos| sort: 'date') | reverse %}
+{% for image in sorted %}
 
 <article>
   <a class="thumbnail" href="{{ relBase }}{{ image.image }}" data-position="left center">
