@@ -78,4 +78,4 @@ defaults:
           width: 1024
           height: 720
           resize_style: cover
-          uploads_dir: "/photos"
+          uploads_dir: "photos"
