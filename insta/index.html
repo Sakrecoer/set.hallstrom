@@ -40,7 +40,7 @@ description: >-
 
 <!-- Thumbnail -->
 <section id="thumbnails">
-{% assign sorted = (site.photos| sort: 'date') | reverse %}
+{% assign sorted = site.photos | reverse %}
 {% for image in sorted %}
 
 <article>
