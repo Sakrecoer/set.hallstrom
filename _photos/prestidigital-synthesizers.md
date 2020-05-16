@@ -6,5 +6,7 @@ description: >-
 image: /photos/dsc01583.jpg
 date: 2004-12-23 00:00:00 +0100
 tags:
+  - Art
+  - Music
 ---
 
