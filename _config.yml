@@ -52,6 +52,7 @@ plugins:
 collections:
   images:
     output: false
+    _hide_content: true
 
 
 # # defaults
