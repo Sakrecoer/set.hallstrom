@@ -16,7 +16,6 @@
 title: 'Set Hallström'
 email: set@hallstrom.ch 
 phone: '+46708134377'
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://set.hallstrom.ch" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_username: 'sethybwoy'
 
@@ -28,7 +27,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 author:
   name: Set Hallstrom
   email: set@hallstrom.ch 
-  twitter: # twitter username without the @ symbol
+  twitter: heptazoid
 social:
   name: Set Hallstrom
   links:
@@ -42,7 +41,6 @@ timezone: Europe/Stockholm
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-feed
 
 # Plugin settings:
 
@@ -53,6 +51,7 @@ collections:
   photos:
     output: false
     _hide_content: true
+    sort_by: date
 
 
 # # defaults
