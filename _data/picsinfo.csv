@@ -1,1 +1,5 @@
-SourceFile
+SourceFile,ExifToolVersion,FileName,Directory,FileSize,FileModifyDate,FileAccessDate,FileInodeChangeDate,FilePermissions,FileType,FileTypeExtension,MIMEType,JFIFVersion,ResolutionUnit,XResolution,YResolution,ImageWidth,ImageHeight,EncodingProcess,BitsPerSample,ColorComponents,YCbCrSubSampling,ImageSize,Megapixels
+photos/05-4.jpg,11.16,05-4.jpg,photos,58 kB,2020:05:16 21:01:47+01:00,2020:05:16 21:01:47+01:00,2020:05:16 21:01:47+01:00,rw-r--r--,JPEG,jpg,image/jpeg,1.01,None,1,1,450,600,"Baseline DCT, Huffman coding",8,3,YCbCr4:2:0 (2 2),450x600,0.270
+photos/dsc01583.jpg,11.16,dsc01583.jpg,photos,325 kB,2020:05:16 20:55:15+01:00,2020:05:16 20:55:15+01:00,2020:05:16 20:55:15+01:00,rw-r--r--,JPEG,jpg,image/jpeg,1.01,None,1,1,1002,1080,"Baseline DCT, Huffman coding",8,3,YCbCr4:4:4 (1 1),1002x1080,1.1
+photos/thumbs/05-4.jpg,11.16,05-4.jpg,photos/thumbs,6.5 kB,2020:05:16 21:01:47+01:00,2020:05:16 21:01:47+01:00,2020:05:16 21:01:47+01:00,rw-r--r--,JPEG,jpg,image/jpeg,1.01,None,1,1,113,150,"Baseline DCT, Huffman coding",8,3,YCbCr4:2:0 (2 2),113x150,0.017
+photos/thumbs/dsc01583.jpg,11.16,dsc01583.jpg,photos/thumbs,13 kB,2020:05:16 21:01:47+01:00,2020:05:16 21:01:47+01:00,2020:05:16 21:01:47+01:00,rw-r--r--,JPEG,jpg,image/jpeg,1.01,None,1,1,139,150,"Baseline DCT, Huffman coding",8,3,YCbCr4:4:4 (1 1),139x150,0.021
