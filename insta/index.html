@@ -49,9 +49,7 @@ description: >-
 
 <h2>{{ image.title }}</h2>
 <p>{{ image.description }} </p>
-{% for data in site.data.picsinfo %}
-{% assign file = data.SourceFile | prepend: '/' %}
-{% if file == image.image %}
+{% for data in site.data.picsinfo %} {% assign file = data.SourceFile | prepend: '/' %} {% if file == image.image %}
 <p>
   {% if data.Make != null %}
   <span class="icon small fa-camera-retro"></span> {{ data.Make }} {{ data.Model }} 
@@ -65,17 +63,14 @@ description: >-
   {% if data.Copyright != null %}
   | <span class="icon small fa-creative-commons"></span> {{ data.Copyright }}
   {% endif %}
-  <p>
-    {% for tag in image.tags %}
-    #{{ tag }} 
-    {% endfor %}
-  </p> 
 </p>
-{% endif %}
-{% endfor %}
-
+<p>
+  {% for tag in image.tags %}
+  #{{ tag }} 
+  {% endfor %}
+</p> 
+{% endif %} {% endfor %}
 </article>
-
 {% endfor %}
 </section>
 
