@@ -130,16 +130,9 @@ lang: en
 
 ## Colors
 
-bg:           '#0D3B66'
-bg-alt:       'rgba(31, 23, 41, 0.75)'
-fg:           '#ebdbf8'
-fg-alt:       'rgba(235, 219, 248, 0.25)'
-border:       '#000000'
-border-alt:   'rgba(0, 0, 0, 0.75)'
-accent1:      '#38ff59'
-accent1-alt:  'rgba(56, 255, 89, 0.75)'
-accent2:      '#8d3ed8'
-accent2-alt:  'rgba(141, 62, 216, 0.75)'
+bg:           '#0C0F0A'
+fg:           '#FFFFFF'
+
 
 ### PWA
 # plugins:

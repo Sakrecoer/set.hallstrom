@@ -1,10 +1,11 @@
 ---
 title: Multidisciplinary humanoid
 description: >-
-  The Digital CV of Set Hallstrom. Multi-disciplinary humanoïd, Free Software
+  The Digital CV of Set Hallstrom. Multi-disciplinary creative humanoïd, Free Software
   advocate and Community Manager.
 image: /siteicon.png
-layout: default
+video_path: /videos/set.mp4
+
 ---
 {% include relBase.html %}
 {% include header.html %}
@@ -28,21 +29,21 @@ layout: default
 
   <article>
     <h3>{{ page.description }}</h3>
-    <h4>📱 <a href="tel:+46708134377">+46 708 134 377</a></h4>
-    <h4>🔐 <a style="font-size: 1em;" href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x92401D3F102A0208">FB69 71E5 717F 6537 7B60 DEC1 9240 1D3F 102A 0208&nbsp;</a></h4>
+    <p><a href="/cv/" class="button">check my CV</a></p>
+    <p>📱 <a href="tel:+46708134377">+46 708 134 377</a></p>
+    <p>🔐 <a style="font-size: 1em;" href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x92401D3F102A0208">GPG-ID 92401D3F102A0208</a></p>
   
   </article>
 
   <article>
 
-    <ul>
-    <li><a class="button" href="/insta/" alt="Setstagram">📷</a></li>
-    <li><a class="button" href="/cv/">📃 CV</a></li>
-    <li><a class="button" target="_blank" href="/Set_Hallstrom_20160906_portfolio.pdf">🎨 Portfolio (+20Mb)</a></li>
-    <li><a class="button" target="_blank" alt="Music Network" href="https://sakrecoer.com/music/">🎧 Music</a></li>
-    <li><a class="button" target="_blank" alt="Terminalnet Work" href="https://terminalnet.work">🌍 Network</a></li>
-    <li><a class="button" target="_blank" alt="Botnet" href="https://www.linkedin.com/in/set-hallstrom/">🕸️ Botnet</a></li>
-  </ul>
+    <div class="streamer">
+      {% for shop in site.data.navigation %}
+  
+      <a rel="noopener" href="{{ shop.url }}" title="Stream from {{ shop.name }}" class="icon">{{ shop.icon }}</a>
+  
+      {% endfor %}
+    </div>
   </article>
 
 

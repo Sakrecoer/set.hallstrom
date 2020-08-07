@@ -10,18 +10,20 @@ input[type=text], input[type=email], textarea, select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  font-family: _font(family-fixed);
 }
 
 
 input[type=submit] {
   width: 200px;
-  background-image: linear-gradient(223deg, rgba(255, 0, 0, 0.5), rgba(0, 153, 255, 0.5));
+  background-image: linear-gradient(223deg, _palette(accent1), _palette(accent2));
   background-size: 800% 800%;
-  -webkit-animation: AnimationName 29s ease infinite;
-  -moz-animation: AnimationName 29s ease infinite;
-  animation: AnimationName 29s ease infinite;
+  -webkit-animation: backgroundBlink 2s ease infinite;
+  -moz-animation: backgroundBlink 2s ease infinite;
+  animation: backgroundBlink 2s ease infinite;
 
-  color: white;
+
+  color: _palette(bg);
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -30,11 +32,11 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-image: linear-gradient(223deg, rgba(0, 153, 255, 0.5),rgba(255, 0, 0, 0.5));
+  background-image: linear-gradient(223deg, _palette(accent2),_palette(accent1));
   background-size: 800% 800%;
-  -webkit-animation: AnimationName 29s ease infinite;
-  -moz-animation: AnimationName 29s ease infinite;
-  animation: AnimationName 29s ease infinite;
+  -webkit-animation: backgroundBlink 2s ease infinite;
+  -moz-animation: backgroundBlink 2s ease infinite;
+  animation: backgroundBlink 2s ease infinite;
 
 }
 /* CSS Created by CSS CHECKBOX */
@@ -87,7 +89,7 @@ label {
 
   input[type=checkbox].css-checkbox.lrg + label.css-label.lrg {
     padding-left:22px;
-      height:20px; 
+    height:20px; 
     display:inline-block;
     line-height:20px;
     background-repeat:no-repeat;

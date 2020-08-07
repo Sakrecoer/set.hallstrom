@@ -133,15 +133,15 @@ $font: (
 // Palette.
 $palette: (
 
-  bg:         #0D3B66, 
-  bg-alt:     rgba(13, 59, 102, 0.5),
-  fg:         #FAF0CA,
-  fg-alt:     rgba(250, 240, 202, 0.5),
+  bg:         #0C0F0A, 
+  bg-alt:     rgba(12, 15, 10, 0.5), 
+  fg:         #FFFFFF,
+  fg-alt:     rgba(255, 255, 255, 0.5),
   border:     #000000,
-  border-alt: rgba(0, 0, 0, 0.5),
-  accent1:    #F95738,
-  accent1-alt:rgba(249, 88, 56, 0.75),
-  accent2:    #EE964B,
-  accent2-alt:rgba(238, 151, 75, 0.75),
+  border-alt: rgba(0, 0, 0, 0.75),
+  accent1:    #41EAD4,
+  accent1-alt:rgba(65, 234, 212, 0.75),
+  accent2:    #FF206E,
+  accent2-alt:rgba(255, 32, 110, 0.75),
 
 );

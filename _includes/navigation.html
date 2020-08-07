@@ -1,7 +1,9 @@
 <!-- Navigation -->
 <div id="sticky" class="logo{% if page.collection == 'tracks' %} sticky{% endif %}">
 
-  <a id="logo" href="/"><img height="40px" src="{{ site.banner }}" alt="{{ site.title }} Logo" /></a>
+  <a id="logo" href="/">  <video autoplay muted loop style="border-radius:5px; height:40px">
+    <source src="{{ page.video_path }}" type="video/mp4">
+  </video></a>
   <a href="#navbar" onclick="blurBody()" alt="Navigation Menu" title="Navigation Menu"><span
       class="fas fa-bars navmenu"></span></a>
 

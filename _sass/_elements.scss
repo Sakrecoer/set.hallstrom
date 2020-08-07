@@ -37,13 +37,13 @@ a:hover {
 .button {
   background-color: _palette(accent2);
   padding: 1em;
-
+  display: inline-block;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
-  color: _palette(fg);
+  color: _palette(bg);
 
   
 }
@@ -67,28 +67,38 @@ a:hover {
     flex: 1 1 280px;
     max-width: 480px;
     margin: 20px;
-    h4 {
-      font-size: 1.5em;
-      font-family: _font(family);
+    p {
+      margin-top: 20px;
     }
     ul{
       width: 100%;
 
     }
-    li {
 
-      position: relative;
-      margin-bottom: 40px;
-      .button {
-        width: 100%;
-        position: relative;
-        display: block;
-        box-sizing: border-box;
-        font-weight: 700;
-        font-size: 1.5em;
-      }
+    .button {
+      background-image: linear-gradient(223deg, _palette(accent2),_palette(accent1));
+      background-size: 800% 800%;
+      -webkit-animation: backgroundBlink 2s ease infinite;
+      -moz-animation: backgroundBlink 2s ease infinite;
+      animation: backgroundBlink 2s ease infinite;
+    }
+    .streamer {
+      margin-top:0;
+    }
+    .icon {
+      margin-top: 0;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border-radius: 200px;
+      font-size: 40px;
+
+      line-height: 100px;
+      text-align: center;
 
     }
+
+
   }
   img {
     width:100%;
@@ -236,4 +246,15 @@ a:hover {
   background: _palette(bg);
   background: linear-gradient(180deg, _palette(bg) 26%, _palette(accent2-alt) 100%);
 
+}
+.info {
+  ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-bottom: 20px;
+  }
+  .lastmod {
+    margin-top:80px;
+    font-size: 0.75em;
+  }
 }

@@ -1,17 +1,25 @@
-- icon: fa-disc
-  url: /discography/
-  name: Discog
+- name: Setstagram
+  icon: 📷
+  url: /insta/
   external_site: false
-- icon: fa-newspaper
-  url: /log/
-  name: Log
+- name: CV
+  icon: 📃
+  url: /cv/
   external_site: false
-- icon: fa-finger-print
-  url: /about/
-  name: About
+- name: Protfolio
+  icon: 🎨
+  url: /Set_Hallstrom_20160906_portfolio.pdf
   external_site: false
-- icon: fa-link
-  url: /links/
-  name: Links
-  external_site: false
+- name: Music
+  icon: 🎧
+  url: https://setto.basspistol.com
+  external_site: true
+- name: Network
+  icon: 🌍
+  url: https://terminalnet.work
+  external_site: true
+- name: Botnet
+  icon: 🕸️
+  url: https://www.linkedin.com/in/set-hallstrom/
+  external_site: true
   
