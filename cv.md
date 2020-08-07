@@ -9,64 +9,7 @@ sitemap: true
 ---
 
 <!--- begin content -->
-<div class="date">Last update: {{ page.date | date: "%a, %b %d, %Y" }}
- <!-- <h2><a target="_blank" href="/set_hallstrom20180313.pdf">Download PDF</a></h2> -->
-</div> 
-<div class="column editable">
-  <h3>BIOGRAPHY</h3>
-  <p>My name is Set Hallstr&ouml;m, I am a 1980 born half-Swiss, half-Swedish humanoid. I spent my formative years in Sweden but moved to Switzerland when I was 7 years old and later to Spain at 25 to work as a free-lance graphic designer and music producer in the thriving scene of Electronic music of Barcelona. These moves helped me to develop my interest for different languages, and today I speak five fluently. I have a broad and genuine interest for people and this, combined with my well-developed communication skills, gives me the perfect tools to work with in social environments. My schooling at <a target="_blank" href="https://edhea.ch/">&Eacute;cole Cantonale d'Art du Vallais</a> (Swiss Art-school, today known as EDHEA) and my experiences as free-lance graphic designer have given me deep knowledge of several tools for printed- / digital-publications, such as the complete Adobe products suit, several CMS systems including the codes and the mechanisms behind these digital-platforms.</p>
-  <p>When I am not working, I spend most of my time writing <a target="_blank" href="https://sakrecoer.com/">music, poetry,</a> <a target="_blank" href="https://vimeo.com/83261266">animating</a> or experimenting with my own Ubuntu servers. Free Open Source Software and DIY advocate, I have also been volunteering as <a target="_blank" href="https://ubuntustudio.org/2016/04/new-ubuntu-studio-release-and-new-project-lead/">Project-Leader</a> for the multimedia flavor of the Operating System "Ubuntu" (<a target="_blank" href="https://ubuntustudio.org/">UbuntuStudio.org</a>) and am the initiator of the non-profit digital record-label and artist-management foundation <a target="_blank" href="https://basspistol.com/">Basspistol.com</a></p>
-  <p>&nbsp;</p>
-</div>
 
-<div class="editable column">
-  <h3><strong>LANGUAGES</strong></h3>
-  <ul>
-    <li>French (Native)</li>
-    <li>Swedish (Native)</li>
-    <li>Spanish (Fluent)</li>
-    <li>German (Fluent)</li>
-    <li>English (Fluent)</li>
-  </ul>
-  <h3><strong>STUDIES</strong></h3>
-  <ul>
-    <li>School Of Fine Arts <a target="_blank" href="https://edhea.ch/">ECAV,</a> specializing in Graphic Design (Switzerland 2000-2004)</li>
-    <li>Bachelor of Arts (Switzerland 1995-2000)</li>
-  </ul>
-  <h3><strong>COMPUTER</strong></h3>
-  <ul>
-    <li>OS: Linux User (All day Everyday), Mac OSX (Advanced User), Windows AD (Once upon a time Certified)</li>
-    <li>WEB: Nginx, Apache, LIGHTTPD, mySQL, HTML, CSS, Icecast2, Liquidsoap.</li>
-    <li>SOFTWARE: Did i say Free/Libre-software?</li>
-  </ul>
-  <h3><strong>CREATIVE EXPERIENCE</strong></h3>
-  <ul>
-    <li>Part Time Freelance Graphic Designer (2004-present) Posters, illustrations, logotypes to companies in Sweden, Switzerland and Spain. (Customers: Villa Magica Records, Gestronic, Taichi Qua, MicroBCN. Kumquat, Attitudes, Gnashed Records, Rolando Y Su funnybunny, Globo, Rodeo Booking, Nitsa, Sidecar, Basspistol Records)</li>
-    <li>Artists and research for Rodeo Bookings and globoBCN. Booking and PR (Spain 2007-2010)</li>
-    <li>Graphic Designer for <a href="https://reala.se/">REALA.</a> Internship (Sweden 2004)</li>
-    <li>Graphic Designer for <a href="https://blvdr.ch/">BLVDR.</a> Internship (Switzerland 2003)</li>
-  </ul>
-</div>
-<div class="editable column">
-  <h3><strong>EXECUTIVE EXPERIENCE</strong></h3>
-  <ul>
-    <li>Web Developer for <a target="_blank" href="https://www.cuttlefish.se/">Cuttlefish.se</a> Part time (Stockholm 2019-Present).</li>
-    <li>Web Developer for <a target="_blank" href="https://www.seeqest.com/">Seeqest, </a>Part time (Stockholm 2019-2020).</li>
-    <li>Web Developer for <a href="https://www.momangen.se/">Momangen.se</a> Part time (Stockholm 2019-2020).</li>
-    <li>Web Developer for <a href="https://enrenarevardag.se/">En Renare Vardag AB, </a>Part time (Stockholm 2019-Present).</li>
-    <li>Community Manager for <a href="https://www.innovatesecurity.se/">Innovate Security Sweden AB, </a>Part time (Stockholm 2018-2019).</li>
-    <li>Community Manager for <a href="https://trifork.com/">Trifork AB</a> (Event Management, PR, Marketing, (Stockholm 2016-2018).</li>
-    <li>Part Time Freelance Graphic Designer; Posters, illustrations, logotypes, informative websites. (Europe, 2004 &ndash; present).</li>
-    <li>Sysadmin for <a target="_blank" href="https://basspistol.com/">Basspistol.com</a> (Internet, 2005 &ndash; present).</li>
-    <li>Project-Lead for Ubuntu Studio; (Internet, April 2016 &ndash; April 2017)</li>
-    <li><a target="_blank" href="https://www.youtube.com/watch?v=mPQscw5UlXs">Product Specialist</a> for NextBeat By WACOM. (Spain 2009-2010)</li>
-  </ul>
-  <h3><strong>SOCIAL EXPERIENCE</strong></h3>
-  <ul>
-    <li>A&amp;R and manager for <a target="_blank" href="https://basspistol.com/">Basspistol</a> (WorldWide 2010-present)</li>
-    <li>Coordinator for the department of Art&amp;Culture at <a target="_blank" href="https://rmll.info/">RMLL</a> (Geneva 2012)</li>
-    <li>Youth-center teacher in various music and art projects. (Geneva 2004-2005)</li>
-  </ul>
-</div>
-<div class="column">{% include contact.html %}</div>
-<!-- end content -->
+<div class="date">Last update: {{ page.date | date: "%a, %b %d, %Y" }} <!-- <h2><a target="_blank" href="/set_hallstrom20180313.pdf">Download PDF</a></h2> --></div>
+
+<div class="column editable"><p>My name is Set Hallstr&ouml;m, I am a 1980 born half-Swiss, half-Swedish humanoid. I spent my formative years in Sweden but moved to Switzerland when I was 7 years old and later to Spain at 25 to work as a free-lance graphic designer and music producer in the thriving scene of Electronic music of Barcelona. These moves helped me to develop my interest for different languages, and today I speak five fluently. I have a broad and genuine interest for people and this, combined with my well-developed communication skills, gives me the perfect tools to work with in social environments. My schooling at <a target="_blank" href="https://edhea.ch/">&Eacute;cole Cantonale d'Art du Vallais</a> (Swiss Art-school, today known as EDHEA) and my experiences as free-lance graphic designer have given me deep knowledge of several tools for printed- / digital-publications, such as the complete Adobe products suit, several CMS systems including the codes and the mechanisms behind these digital-platforms.</p><p>When I am not working, I spend most of my time writing <a target="_blank" href="https://sakrecoer.com/">music, poetry,</a> <a target="_blank" href="https://vimeo.com/83261266">animating</a> or experimenting with my own Ubuntu servers. Free Open Source Software and DIY advocate, I have also been volunteering as <a target="_blank" href="https://ubuntustudio.org/2016/04/new-ubuntu-studio-release-and-new-project-lead/">Project-Leader</a> for the multimedia flavor of the Operating System "Ubuntu" (<a target="_blank" href="https://ubuntustudio.org/">UbuntuStudio.org</a>) and am the initiator of the non-profit digital record-label and artist-management foundation <a target="_blank" href="https://basspistol.com/">Basspistol.com</a></p><p>&nbsp;</p><h3><strong>LANGUAGES</strong></h3><ul><li>French (Native)</li><li>Swedish (Native)</li><li>Spanish (Fluent)</li><li>German (Fluent)</li><li>English (Fluent)</li></ul><h3><strong>STUDIES</strong></h3><ul><li>School Of Fine Arts <a target="_blank" href="https://edhea.ch/">ECAV,</a> specializing in Graphic Design (Switzerland 2000-2004)</li><li>Bachelor of Arts (Switzerland 1995-2000)</li></ul><h3><strong>COMPUTER</strong></h3><ul><li>OS: Linux User (All day Everyday), Mac OSX (Advanced User), Windows AD (Once upon a time Certified)</li><li>WEB: Nginx, Apache, LIGHTTPD, mySQL, HTML, CSS, Icecast2, Liquidsoap.</li><li>SOFTWARE: Did i say Free/Libre-software?</li></ul><h3><strong>CREATIVE EXPERIENCE</strong></h3><ul><li>Part Time Freelance Graphic Designer (2004-present) Posters, illustrations, logotypes to companies in Sweden, Switzerland and Spain. (Customers: Villa Magica Records, Gestronic, Taichi Qua, MicroBCN. Kumquat, Attitudes, Gnashed Records, Rolando Y Su funnybunny, Globo, Rodeo Booking, Nitsa, Sidecar, Basspistol Records)</li><li>Artists and research for Rodeo Bookings and globoBCN. Booking and PR (Spain 2007-2010)</li><li>Graphic Designer for <a href="https://reala.se/">REALA.</a> Internship (Sweden 2004)</li><li>Graphic Designer for <a href="https://blvdr.ch/">BLVDR.</a> Internship (Switzerland 2003)</li></ul><h3><strong>EXECUTIVE EXPERIENCE</strong></h3><ul><li>Web Developer for <a target="_blank" href="https://www.cuttlefish.se/">Cuttlefish.se</a> Part time (Stockholm 2019-Present).</li><li>Web Developer for <a target="_blank" href="https://www.seeqest.com/">Seeqest, </a>Part time (Stockholm 2019-2020).</li><li>Web Developer for <a href="https://www.momangen.se/">Momangen.se</a> Part time (Stockholm 2019-2020).</li><li>Web Developer for <a href="https://enrenarevardag.se/">En Renare Vardag AB, </a>Part time (Stockholm 2019-Present).</li><li>Community Manager for <a href="https://www.innovatesecurity.se/">Innovate Security Sweden AB, </a>Part time (Stockholm 2018-2019).</li><li>Community Manager for <a href="https://trifork.com/">Trifork AB</a> (Event Management, PR, Marketing, (Stockholm 2016-2018).</li><li>Part Time Freelance Graphic Designer; Posters, illustrations, logotypes, informative websites. (Europe, 2004 &ndash; present).</li><li>Sysadmin for <a target="_blank" href="https://basspistol.com/">Basspistol.com</a> (Internet, 2005 &ndash; present).</li><li>Project-Lead for Ubuntu Studio; (Internet, April 2016 &ndash; April 2017)</li><li><a target="_blank" href="https://www.youtube.com/watch?v=mPQscw5UlXs">Product Specialist</a> for NextBeat By WACOM. (Spain 2009-2010)</li></ul><h3><strong>SOCIAL EXPERIENCE</strong></h3><ul><li>A&amp;R and manager for <a target="_blank" href="https://basspistol.com/">Basspistol</a> (WorldWide 2010-present)</li><li>Coordinator for the department of Art&amp;Culture at <a target="_blank" href="https://rmll.info/">RMLL</a> (Geneva 2012)</li><li>Youth-center teacher in various music and art projects. (Geneva 2004-2005)</li></ul></div><!-- end content -->
