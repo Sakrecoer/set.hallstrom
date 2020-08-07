@@ -84,9 +84,14 @@ a:hover {
     }
     .streamer {
       margin-top:0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    
     }
     .icon {
-      margin-top: 0;
+      flex: 0 0 100px;
+      margin: 0 0 20px 0;
       display: inline-block;
       width: 100px;
       height: 100px;
@@ -192,6 +197,7 @@ a:hover {
   }
 }
 .info-pages {
+  padding: 0;
   h2, h3, h4, h5, h6 {
     text-align: left;
   }
@@ -257,4 +263,8 @@ a:hover {
     margin-top:80px;
     font-size: 0.75em;
   }
+}
+
+#contact {
+  padding: 20px;
 }
