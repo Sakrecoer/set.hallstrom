@@ -1,0 +1,235 @@
+
+// Basic Elements
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: _font(title);
+
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+strong {
+  font-weight: 700;
+}
+a {
+  text-decoration-style: wavy;
+  text-decoration-color: transparent;
+  color: _palette(accent2);
+  -moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+a:hover {
+  color: _palette(accent1);
+  text-decoration-style: wavy;
+  text-decoration-color: unset;
+}
+
+// Buttons
+
+.button {
+  background-color: _palette(accent2);
+  padding: 1em;
+
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: _palette(fg);
+
+  
+}
+.button:hover {
+  background-color: _palette(accent1);
+  color: _palette(bg);
+}
+
+// album index
+.releases {
+  display:flex; 
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+
+  h2 {
+    flex: 0 0 100%;
+    margin: 20px;
+  }
+  article {
+    flex: 1 1 280px;
+    max-width: 480px;
+    margin: 20px;
+    ul{
+      width: 100%;
+
+    }
+    li {
+
+      position: relative;
+      margin: 40px;
+      .button {
+        width: 100%;
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        font-weight: 700;
+        font-size: 1.5em;
+      }
+
+    }
+  }
+  img {
+    width:100%;
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+// Streambox
+.streambox {
+  text-align: center;
+  line-height: 2em;
+  > h2, div {
+    margin: 20px;
+  }
+}
+.streamer {
+  margin-top: 2em;
+  text-align: center;
+
+}
+// icon
+
+.label {
+  display: none;
+}
+.icon {
+  flex: 0 0 45px;
+  margin:20px; 
+  font-size: 45px;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border: 1px solid _palette(accent2);
+  text-align: center;
+  text-decoration: none;
+  -moz-transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+
+}
+.icon:hover {
+  border: 1px solid _palette(accent1);
+
+}
+.small {
+  border-radius: 80px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 45px;
+  margin-left: 0;
+}
+.smaller {
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  margin: 10px 10px 10px 0;
+}
+
+// Content Author
+#author {
+  flex: 0 0 280px;
+  margin: 20px;
+  .date {
+    font-size:.85em;
+  }
+  .author-image {
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size:cover; 
+    border-radius:150px; 
+    width:150px; 
+    height:150px;
+  }
+}
+
+.info, .info-pages {
+  padding: 40px;
+  > div {
+    max-width: 1200px;
+    margin: auto;
+  }
+  p {
+    margin: 20px 0;
+  }
+}
+.info-pages {
+  h2, h3, h4, h5, h6 {
+    text-align: left;
+  }
+}
+
+.news, .links {
+  margin-top: 40px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  h2 {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+  > div {
+    background-size: cover;
+    background-repeat: no;
+    background-position: center center;
+    flex: 1 1 512px;
+    min-height: 80vh;
+
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: left;
+
+  }
+  .description {
+    h2, p, a {
+      text-align: center;
+    }
+    p {
+      margin-top: 20px;
+    }
+    p:last-child {
+      margin-bottom: 40px;
+    }
+    min-height: unset;
+  }
+}
+.news:nth-child(even), .links:nth-child(even) {
+  flex-direction: row-reverse;
+
+}
+.links {
+  > div {
+    min-height: unset;
+  }
+ 
+}
+.linksbg {
+  background-size: 100%;
+  background: _palette(bg);
+  background: linear-gradient(180deg, _palette(bg) 26%, _palette(accent2-alt) 100%);
+
+}

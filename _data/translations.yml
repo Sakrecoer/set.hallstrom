@@ -1,0 +1,52 @@
+en:
+  navigation:
+    -   
+  read-post: 'Read post'
+  name: Name
+  lastname: Last name
+  email: E-mail
+  message: Message
+  privacy: 'I agree with the <a href=''/cookies/#privacythingy''>privacy policy.</a>'
+  newsletter: I want the newsletter!
+  required: Required field
+  contact-us: Get in touch
+  contact: Contact
+  write-msg: Write your message...
+  send: Send Message
+  news: News
+  top: Back to top
+  cookies: >- 
+    <p>I only use cookies if you consent to it. They don't contain any identifiable info: they just let me know if you enjoyed this enough to come back.
+    <br />Click <a href="#" id="cookie-notice-decline">here</a> if you want this shit to go away without cookies. 
+    <br />Read more about how me & basspistol <a href="/cookies/">use cookies</a>
+    </p>
+  cookie-agree: I'm in!
+  back: Take me back!
+  home: Home
+  post-nav: Read more posts
+  
+sv: 
+  navigation:
+  read-post: 'Läs post'
+  name: Namn
+  lastname: Efternamn
+  email: e-post
+  message: Meddelande
+  privacy: 'Jag godkänner <a href=''/cookies/''>sekretesspolicyn</a>'
+  newsletter: Jag vill ha nyhetsutskick
+  required: Obligatoriskt fält
+  contact-us: Kontakta oss
+  contact: Kontakt
+  write-msg: Skriv ditt meddelande...
+  send: Skicka Meddelande
+  news: Nyheter
+  top: Tillbaka till toppen
+  cookies: >- 
+    <p>Vi använder bara cookies om du går med på det. Hjälp oss förbättra våran marknadsföring! 
+    <br />Klicka <a href="#" id="cookie-notice-decline">här</a> om du inte vill hjälpa till 
+    <br />Läs mer om <a href="/cookies/">hur vi använder cookies</a>
+    </p>
+  cookie-agree: Jag hjälper gärna!
+  back: Ta mig tillbaka!
+  home: Hem
+  post-nav: Läs fler inlägg

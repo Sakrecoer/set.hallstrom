@@ -2,7 +2,7 @@
 <div id="contact">
   <form action="{{ relBase }}/contact-success/" method="post" class="contact-form">
     <div>
-      <h1>Drop me a line!</h1>
+      <h2>Drop me a line!</h2>
       <input type="hidden" name="_to" value="set+website@hallstrom.ch" /><br />
       <input type="text" name="_gotcha" style="display: none;" />
     </div>
@@ -18,10 +18,8 @@
     <br />
     <div>
       <input type="checkbox" name="consent" id="consent" required class="css-checkbox lrg klaus" /><label for="consent"
-        class="css-label lrg klaus">I agree with
-        {% if page.url == '/privacy-policy/' %} this privacy policy.
-        {% else %} the <a href="/privacy-policy/">privacy policy.</a>
-        {% endif %}</label>
+        class="css-label lrg klaus">I agree with the <a href="/cookies/">privacy policy.</a>
+</label>
     </div>
     <br />
     <div>

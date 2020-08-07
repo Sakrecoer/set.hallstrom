@@ -1,0 +1,72 @@
+
+<div id="cookie-notice">
+
+  <p>I only use cookies if you consent to it. They don't contain any identifiable info: they just let me know if you
+    enjoyed this enough to come back.
+    <br />Click <a href="#" id="cookie-notice-decline">here</a> if you want this shit to go away without cookies.
+    <br />Read more about how me & basspistol <a href="/cookies/">use cookies</a>
+  </p>
+  <a class="button yes" href="#"
+    id="cookie-notice-accept">I'm in!</a>
+
+</div>
+
+<script>
+  function createCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+  }
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+  function eraseCookie(name) {
+    createCookie(name, "", -1);
+  }
+
+  if (readCookie('cookie-notice-dismissed') == 'wantCookies') {
+    {% include analytics.js %}
+  } else {
+    document.getElementById('cookie-notice').style.display = 'flex';
+
+    {% include matomo.js %}
+
+  }
+  if (readCookie('cookie-notice-dismissed') == 'dontWantCookies') {
+    document.getElementById('cookie-notice').style.display = 'none';
+
+    {% include matomo.js %}
+  }
+  document.getElementById('cookie-notice-accept').addEventListener("click", function () {
+    createCookie('cookie-notice-dismissed', 'wantCookies', 31);
+    document.getElementById('cookie-notice').style.display = 'none';
+    _paq.push(['trackEvent', 'Consent', 'wantCookie']);
+    location.reload();
+  });
+
+  document.getElementById('cookie-notice-decline').addEventListener("click", function () {
+    createCookie('cookie-notice-dismissed', 'dontWantCookies', 31);
+    document.getElementById('cookie-notice').style.display = 'none';
+    _paq.push(['trackEvent', 'Consent', 'dontWantCookie']);
+    location.reload();
+  });
+
+  // document.getElementById('cookie-notice-gimme').addEventListener("click", function () {
+  //   createCookie('cookie-notice-dismissed', 'wantCookies', 31);
+  //   document.getElementById('cookie-notice').style.display = 'none';
+  //   location.reload();
+  // });
+
+
+</script>

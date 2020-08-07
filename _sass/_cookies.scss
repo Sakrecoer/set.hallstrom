@@ -1,0 +1,61 @@
+/* cookies */
+
+#cookie-notice {
+
+  display: none;
+  text-align: right;
+  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: _palette(border);
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  p {
+    flex: 1 0 250px;
+    margin: 40px 20px 40px 40px;
+    font-size: 0.75em;
+    font-family: _font(family-fixed);
+  }
+  @media only screen and (max-width: 651px) {
+    p {
+      text-align: center;
+      margin: 40px 40px 20px 40px;
+    }
+    .yes {
+      margin: 20px 40px 40px 40px;
+    }
+  }
+}
+
+.yes {
+  flex: 0 0 250px;
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  text-align: center;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-image: linear-gradient(228deg, _palette(accent1-alt), _palette(accent2-alt));
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 400% 400%;
+  -webkit-animation: backgroundBlink 2s ease infinite;
+  -moz-animation: backgroundBlink 2s ease infinite;
+  animation: backgroundBlink 2s ease infinite;
+  margin: 40px 40px 40px 20px;
+}
+.yes:hover {
+  // color: #000 !important;
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}

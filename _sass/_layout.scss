@@ -1,0 +1,161 @@
+html,
+body {
+  margin:0;
+  padding:0;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: _font(family-fixed);
+  color: _palette(fg);
+  letter-spacing: _font(kerning);
+  background-color: _palette(bg);
+
+}
+#main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-transition: filter 400ms ease-in;
+  -moz-transition: filter 400ms ease-in;
+  transition: filter 400ms ease-in;
+
+}
+.content-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+.wrapper {
+  margin: 20px 40px;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  background-color: _palette(bg);
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  position: relative;
+  min-height: 75vh; 
+  width: 100vw;
+
+  .textcontainer {
+    background-color: _palette(bg-alt);
+    border-radius: 5px;
+    max-width: 700px;
+    padding: 20px 20px 40px 20px;
+  }
+
+  div {
+    z-index: 10;
+    h1, p {
+      flex: 1 0 100%;
+      width: 100%;
+      z-index: 10;
+      color: _palette(fg);
+      text-align: center;
+      max-width: 1200px;
+    }
+    p{
+      margin-top: 40px;
+    }
+  }
+
+  .imagecontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/vignette.svg');
+    background-size: 480px 480px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    z-index: 1;
+ 
+  }
+
+}
+
+section {
+  flex: 1 1 100%;
+  padding: 20px;
+  background-color: _palette(bg);
+  -webkit-box-shadow: inset 0px 23px 25px -25px _palette(border-alt);
+  -moz-box-shadow: inset 0px 23px 25px -25px _palette(border-alt);
+  box-shadow: inset 0px 23px 25px -25px _palette(border-alt);
+  h2 {
+    text-align: center;
+  }
+}
+section:first-of-type {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 160px 20px 200px 20px;
+  background-color: _palette(fg);
+  color: _palette(bg);
+  justify-content: center;
+  background-image: url('../img/vignette-footer.svg');
+  background-size: 480px 480px;
+  background-repeat: repeat-x;
+  background-position: top;
+  box-sizing: border-box;
+  div {
+    flex: 0 1 280px;
+    margin:20px;
+    img {
+      margin: auto;
+      display: block
+    }
+    li {
+      border-bottom: 1px solid _palette(bg-alt);
+      line-height: 2;
+      font-size: 1.5em;
+      a {
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+  small {
+    flex: 0 0 100%;
+    margin: 20px;
+    text-align: center;
+    .label {
+      display: none;
+    }
+  }
+}
+
+.post-navigation {
+  padding: 80px 0 160px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  h2 {
+    flex: 0 0 100%;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .post-nav, .post-nav-next {
+
+    flex: 0 0 200px;
+    margin: 40px;
+    h4 {
+      font-size: 2em;
+      justify-self: right;
+    }
+  }
+
+}

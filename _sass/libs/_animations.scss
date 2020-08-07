@@ -1,0 +1,46 @@
+// Animation 
+@-webkit-keyframes infiniteRotate {  
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes infiniteRotate {  
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes infiniteRotate {  
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+
+@-webkit-keyframes backgroundBlink {
+  0%{background-position:73% 0%}
+  50%{background-position:28% 100%}
+  100%{background-position:73% 0%}
+}
+@-moz-keyframes backgroundBlink {
+  0%{background-position:73% 0%}
+  50%{background-position:28% 100%}
+  100%{background-position:73% 0%}
+}
+@keyframes backgroundBlink {
+  0%{background-position:73% 0%}
+  50%{background-position:28% 100%}
+  100%{background-position:73% 0%}
+}
+
+@-webkit-keyframes backgroundSize {
+  0%{background-size:100% 150%}
+  50%{background-size:150% 100%}
+  100%{background-size:100% 150%}
+}
+@-moz-keyframes backgroundSize {
+  0%{background-size:100% 150%}
+  50%{background-size:150% 100%}
+  100%{background-size:100% 150%}
+}
+@keyframes backgroundSize {
+  0%{background-size:100% 150%}
+  50%{background-size:150% 100%}
+  100%{background-size:100% 150%}
+}

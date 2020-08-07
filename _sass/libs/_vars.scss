@@ -1,0 +1,147 @@
+/// Removes a specific item from a list.
+/// @author Hugo Giraudel
+/// @param {list} $list List.
+/// @param {integer} $index Index.
+/// @return {list} Updated list.
+@function remove-nth($list, $index) {
+
+	$result: null;
+
+	@if type-of($index) != number {
+		@warn "$index: #{quote($index)} is not a number for `remove-nth`.";
+	}
+	@else if $index == 0 {
+		@warn "List index 0 must be a non-zero integer for `remove-nth`.";
+	}
+	@else if abs($index) > length($list) {
+		@warn "List index is #{$index} but list is only #{length($list)} item long for `remove-nth`.";
+	}
+	@else {
+
+		$result: ();
+		$index: if($index < 0, length($list) + $index + 1, $index);
+
+		@for $i from 1 through length($list) {
+
+			@if $i != $index {
+				$result: append($result, nth($list, $i));
+			}
+
+		}
+
+	}
+
+	@return $result;
+
+}
+
+/// Gets a value from a map.
+/// @author Hugo Giraudel
+/// @param {map} $map Map.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function val($map, $keys...) {
+
+	@if nth($keys, 1) == null {
+		$keys: remove-nth($keys, 1);
+	}
+
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+
+	@return $map;
+
+}
+
+/// Gets a font value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _font($keys...) {
+	@return val($font, $keys...);
+}
+
+/// Gets a palette value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _palette($keys...) {
+	@return val($palette, $keys...);
+}
+
+
+
+@font-face {
+  font-family: 'Jetbrain-regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Jetbrain Regular'), local('Jetbrain-Regular'), url(/assets/fonts/JetBrainsMono_Regular.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Jetbrain-regular';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Jetbrain Regular'), local('Jetbrain-Regular'), url(/assets/fonts/JetBrainsMono_Italic.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Jetbrain-regular';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Jetbrain Bold'), local('Jetbrain-Bold'), url(/assets/fonts/JetBrainsMono_Bold.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Jetbrain-regular';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Jetbrain Bold'), local('Jetbrain-Bold'), url(/assets/fonts/JetBrainsMono_Bold_Italic.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Jetbrain-Extrabold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Jetbrain ExtraBold'), local('Jetbrain-ExtraBold'), url(/assets/fonts/JetBrainsMono_ExtraBold.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Jetbrain-Extrabold';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Jetbrain ExtraBold'), local('Jetbrain-ExtraBold'), url(/assets/fonts/JetBrainsMono_ExtraBold_Italic.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Astloch Bold'), local('Astloch-Bold'), url(/assets/fonts/MajorMonoDisplay-Regular.ttf) format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+$font: (
+  title:         ('Staatliches', 'Lucida Console', Monaco, monospace),
+  family:        ('Jetbrain-Extrabold', 'Lucida Console', Monaco, monospace),
+  family-fixed:  ('Jetbrain-Regular', 'Lucida Console', Monaco, monospace),
+  weight:       400,
+  weight-bold:  700,
+  kerning:      -0.025em,
+  kerning-alt:  0.125em
+);
+// Palette.
+$palette: (
+
+  bg:         #3c2a52, 
+  bg-alt:     rgba(60, 42, 82, 0.75),
+  fg:         #ebdbf8,
+  fg-alt:     rgba(235, 219, 248, 0.25),
+  border:     #000000,
+  border-alt: rgba(0, 0, 0, 0.75),
+  accent1:    #38ff59,
+  accent1-alt:rgba(56, 255, 89, 0.75),
+  accent2:    #8d3ed8,
+  accent2-alt:rgba(141, 62, 216, 0.75),
+
+);

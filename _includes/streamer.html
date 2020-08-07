@@ -1,0 +1,88 @@
+
+{% if page.collection == 'posts' %}
+  {% if page.category == 'releases' %}
+  {% if page.check_this_if_cannot_be_bought == false %}
+  <section class="streambox">
+  <h2>Get this release</h2>
+  <div class="streamer">
+    {% for shop in page.stores %}
+
+    <a onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name | remove: " " }}']);" target="_blank" rel="noopener" href="{{ shop.url }}" title="Stream from {{ shop.name }}" class="icon fab {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a>
+
+    {% endfor %}
+  </div>
+  </section>
+  {% else %}
+  <section class="streambox">
+  <h2>This release can't be obtained</h2>
+  <p>Stream, follow, like and subscribe!</p>
+  <div class="streamer">
+    {% for shop in site.data.stores %}
+
+    <a onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name | remove: " " }}']);" target="_blank" rel="noopener" href="{{ shop.url }}" title="Stream from {{ shop.name }}" class="icon fab {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a>
+
+    {% endfor %}
+  </div>
+  </section>
+  {% endif %}
+  {% else %}
+  {% if page.check_this_if_cannot_be_bought == false %}
+  <section class="streambox">
+    <h2>Get this release</h2>
+    <div class="streamer">
+      {% for shop in page.stores %}
+
+      <a onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name | remove: " " }}']);" target="_blank" rel="noopener" href="{{ shop.url }}" title="Stream from {{ shop.name }}" class="icon fab {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a>
+
+      {% endfor %}
+    </div>
+  </section>
+  {% else %}
+  {% endif %}
+  {% endif %}
+{% elsif page.collection == 'tracks' %}
+  <section class="streambox">
+
+  {% for post in site.posts %}
+  {% if post.album == page.albumSlug %}
+  {% if post.check_this_if_cannot_be_bought == false %}
+
+  <h2>Get this track</h2>
+  <div class="streamer">
+    {% for shop in post.stores %}
+
+    <a onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name | remove: " " }}']);" target="_blank" rel="noopener" href="{{ shop.url }}" title="Stream from {{ shop.name }}" class="icon fab {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a>
+
+    {% endfor %}
+  </div>
+  {% else %}
+
+  <h2>This track can't be obtained</h2>
+  <p>Stream, follow, like and subscribe!</p>
+  <div class="streamer">
+    {% for shop in site.data.stores %}
+
+    <a onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name | remove: " " }}']);" target="_blank" rel="noopener" href="{{ shop.url }}" title="Stream from {{ shop.name }}" class="icon fab {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a>
+
+    {% endfor %}
+  </div>
+  {% break %}
+
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+  </section>
+
+{% else %}
+  <section class="streambox">
+  <h2>Support {{ site.title }}</h2>
+  <p>Stream, follow, like and subscribe!</p>
+  <div class="streamer">
+  {% for shop in site.data.stores %}
+
+  <a onclick="_paq.push(['trackEvent', 'StoreLink', '{{ shop.name | remove: " " }}']);" target="_blank" rel="noopener" href="{{ shop.url }}" title="Stream from {{ shop.name }}" class="icon fab {{ shop.icon }}"><span class="label">{{ shop.name }}</span></a>
+
+  {% endfor %}
+  </div>
+  </section>
+{% endif %}

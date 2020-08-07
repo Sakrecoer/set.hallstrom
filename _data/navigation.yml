@@ -1,0 +1,17 @@
+- icon: fa-disc
+  url: /discography/
+  name: Discog
+  external_site: false
+- icon: fa-newspaper
+  url: /log/
+  name: Log
+  external_site: false
+- icon: fa-finger-print
+  url: /about/
+  name: About
+  external_site: false
+- icon: fa-link
+  url: /links/
+  name: Links
+  external_site: false
+  

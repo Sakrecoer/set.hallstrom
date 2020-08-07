@@ -1,3 +1,32 @@
-<div class="editable">
-  <p>Website built with <a target="_blank" href="https://jekyllrb.com">Jekyll.</a><br />Get the source files <a target="_blank" href="https://github.com/Sakrecoer/set.hallstrom">in this git.</a><br />Website Published under a <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons license</a></p>
-</div>
+<!-- Footer -->
+{% unless page.collection == 'tracks' %}
+
+{% endunless %}
+<footer>
+  <div>
+    <h3>{{ site.title }}</h3>
+    <p>{{ site.description }}</p>
+    <ul>
+      {% if page.url != '/' %}
+      <li><a href="{{ relBase }}/">Home</a></li>
+      {% endif %}
+      {% for entry in site.data.navigation %}
+      <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div><img src="{{ relBase }}{{ site.banner-vert }}" width="100%" alt="{{ site.title }} Logo" /></div>
+  <div style="text-align: center;">
+    {% for nw in site.data.social %}
+    <a target="_blank" alt="{{ site.title }} on {{ nw.name }}" title="{{ site.title }} on {{ nw.name }}" rel="noopener"
+      href="{{ nw.url }}" class="icon small fab {{ nw.icon }}"><span class="label">{{ nw.name }}</span></a>
+    {% endfor %}
+    <a target="_blank" alt="email" title="email" href="mailto:{{ site.social.mail }}" class="icon small fas fa-envelope-open-text"><span
+      class="label">Email</span></a>
+  </div>
+  <small>
+
+    <p>&copy;{{ site.time | date: '%Y' }} {{ site.publisher.name }} | <a href="{{ relBase }}/webcreds/">Credits</a> | <a
+        href="{{ relBase }}/cookies/">Cookies & Privacy</a></p>
+  </small>
+</footer>

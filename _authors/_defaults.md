@@ -1,0 +1,9 @@
+---
+name: 
+position: 
+image:
+url_staff: 
+email: 
+gpg: 
+blurb_markup:
+---

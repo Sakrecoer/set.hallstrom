@@ -1,29 +1,46 @@
-<!DOCTYPE html>
-<html>
+---
+---
+<!DOCTYPE HTML>
+<!--
+  Publikatorized by Sakrecoer
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="{{ site.lang }}">
 <head>
-<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-{% include metahead.html %}
-{% include matomo.html %}
+{% include seo.html %}
+{% include relBase.html %}
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+<link rel="stylesheet" href="{{ relBase }}/assets/css/all.min.css" />
+<link rel="stylesheet" href="{{ relBase }}/assets/css/main-20200805-rv2.css" />
+<link rel="apple-touch-icon" href="{{ site.url }}/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="{{ site.url }}/touch-icon.png" sizes="192x192">
+<link rel="shortcut icon" href="{{ site.url }}{{ site.icon }}" type="image/png" />
+<noscript><link rel="stylesheet" href="{{ relBase }}/assets/css/noscripts-20200805.css" /></noscript>
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="{{ site.bg }}"/>
 
 </head>
 
 <body>
-
-{% if page.url == "/" %}
-{% include hero.html %}
-{% else %}
-{% include header.html %}
-{% endif %}
-
-<!-- <div id="navigation"> </div> -->
- 
-<div id="content">
+<!-- Wrapper -->
+<div id="main-wrapper">
+  
 {{ content }}
-</div> 
-
-<div id="footer">
+<!-- Footer -->
+{% unless page.collection == 'tracks' %}
 {% include footer.html %}
-</div>
-</body>
+{% endunless %}
+<!-- END Footer -->
 
+
+</div>
+<!-- END Wrapper -->
+{% unless page.collection == 'traks' %}
+{% include navigation.html %}
+{% endunless %}
+{% include cookie-consent.html %}
+{% include scripts.html %}
+
+</body>
 </html>
+

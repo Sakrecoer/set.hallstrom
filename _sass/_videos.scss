@@ -1,0 +1,25 @@
+/* Background Video */
+.fullscreen-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -100;
+  background: #fff;
+}
+
+.fullscreen-bg__video {
+  background: #fff;
+  position: relative;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}

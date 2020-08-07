@@ -1,0 +1,27 @@
+---
+title: Web-Log
+description: 'Ramblings, announcenments and thoughts going on in the 徒 setto セット Cypher. In written form intertwined with audio'
+image: /images/pages/4-darkweb-instrumental-.jpeg
+---
+
+{% include relBase.html %}
+{% include header.html %}
+<section>
+  <h2>Latest News</h2>
+</section>
+{% for post in site.posts %}
+{% if post.category == 'ramblings' %}
+<section class="news" style="margin:0;">
+
+<div style="background-image:url({{ relBase }}{{ post.image }}"></div>
+<div class="description">
+  <h2>{{ post.title }}</h2>
+  <p><strong>{% include forloop-dates.html %}</strong></p>
+  <p>{{ post.description }}</p>
+<p><a href="{{ relBase }}{{ post.url }}" class="button">Read post</a></p>
+</div>
+
+  
+</section>
+{% endif %}
+{% endfor %}

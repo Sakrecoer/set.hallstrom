@@ -1,0 +1,200 @@
+---
+layout: default
+---
+
+{% include relBase.html %}
+<!-- Banner -->
+{% for album in site.albums %}
+{% if album.slug == page.albumSlug %}
+{% assign onetracker = album.tracks | size %}
+{% endif %}
+{% endfor %}
+
+<div id="trackArt">
+<section>
+  <div class="coverartwrapper">
+    <div class="coverartwrapped" id="coverart" style="background-image: url({{ site.mediaurl }}/{{ page.slug }}.jpeg);"></div>
+  </div>
+  <div class="playbutton hideWhenNoJS">
+  <a id="mu_pause" class="button">Play!</a>
+  </div>
+  <h1>{{ page.common.title }}</h1>
+
+  
+</p>
+
+</section>
+</div>
+<!-- Content -->
+<div id="trackInfo">
+<section>
+  <p>{% for style in page.common.genre %}{{ style }}{% endfor %} by <strong>{{ page.common.artist }}</strong></p>
+  {% for post in site.posts %}
+  {% if post.album == page.albumSlug %}
+  <p>From the {{ page.common.year }} {% if onetracker > 1 %}release{% else %}single{% endif %} <a href="{{ relBase }}{{ post.url }}">&quot;{{ page.common.album }}&quot;</a></p>
+  {% endif %}
+  {% endfor %}
+
+  <p><strong>{% assign round_seconds = page.format.duration | round %}{% assign minutes = round_seconds | divided_by: 60 %}{% assign leftover_seconds = minutes | times: 60 %}{{ minutes }}:{% assign seconds_without_zero = round_seconds | minus: leftover_seconds %}{% if seconds_without_zero < 10 %}0{% endif %}{{ seconds_without_zero }}</strong></p> 
+   
+
+  {% include author.html %}
+
+
+
+      
+  <p class="noJSalbum"><a class="button" target="_blank" rel="noopener" href="{{ site.mediaurl }}/{{ page.albumSlug }}/{{ page.trackSlug }}.mp3"><span  class="fas fa-play"></span> Play!</a></p>
+
+
+
+<!-- Content -->
+
+  {% if page.all.UNSYNCEDLYRICS and page.all.USLT %}
+  <div class="info">
+    <p>
+      {{ page.all.USLT.text | newline_to_br }}
+    </p>
+  </div>
+  {% elsif page.all.USLT and page.all.UNSYNCEDLYRICS == nil %}
+  <div class="info">
+    <p>
+      {{ page.all.USLT.text | newline_to_br }}
+    </p>
+  </div>
+  {% elsif page.all.UNSYNCEDLYRICS and page.all.USLT == nil %}
+  <div class="info">
+    <p>
+      {{ page.all.UNSYNCEDLYRICS | newline_to_br }}
+    </p>
+  </div>
+  {% endif %}
+  <p>
+    {{ page.all.Comment }}
+  </p>
+  {% for albumurl in site.posts %}
+  {% if albumurl.album == page.albumSlug %}
+<p><a href="{{ relBase }}{{ albumurl.url }}" class="button">See release page</a></p>
+{% endif %}
+{% endfor %}
+</section>
+{% for post in site.posts %}
+{% if post.album == page.albumSlug %}
+
+{% endif %}
+{% endfor %}
+<!-- post Naviation -->
+<section class="post-navigation">
+
+
+  {% if page.previous.url or page.next.url %}
+
+  <h2>Track Navigation</h2>
+
+  <div class="post-nav">
+
+      {% if page.previous.url %}
+      <h4><a href="{{ relBase }}{{ page.previous.url }}" alt="Read {{ page.previous.title }}" title="Read {{ page.previous.title }}"><span
+            class="fas fa-arrow-left"></span>&nbsp;Previous</a></h4>
+      <h3>{{ page.previous.common.title }}</h3>
+      <p>{{ page.previous.description }}</p>
+      {% endif %}
+    </div>
+    <div class="post-nav-next">
+      {% if page.next.url%}
+      <h4><a href="{{ page.next.url }}">Next&nbsp;<span class="fas fa-arrow-right"></span></a></h4>
+      <h3>{{ page.next.common.title }}</h3>
+      <p>{{ page.next.description }}</p>
+      {% endif %}
+    </div>
+
+
+
+{% endif %}
+
+
+
+</section>
+{% include footer.html %}
+<!-- End Post Navigation -->
+</div>
+
+<!-- Audio player-->
+
+
+
+<div id="fixedPlayer" class="showplayer hideplayer">
+  <div id="audiowrap">
+
+    <div id="audio0">
+      <audio controls autoplay preload="metadata" data-matomo-title="{{ page.common.title }}">
+        <source src="{{ site.mediaurl }}/{{ page.slug }}.mp3" type="audio/mpeg" ontimeupdate='updateTrackTime(this);' />
+        <h1>Your browser isn't ready for so much hotness. Use the download-link instead.</h1>.
+      </audio>
+    </div>
+
+  </div>
+  <div id="nowPlay">
+
+
+    <div id="tracks">
+      {% if page.previous.url %}
+      <a id="btnPrev" href="{{ relBase }}{{ page.previous.url }}"><span class="fas fa-fast-backward"></span></a>
+      {% endif %}
+
+      {% if page.next.url %}
+      <a id="btnNext" href="{{ relBase }}{{ page.next.url }}"><span class="fas fa-fast-forward"></span></a>
+      {% endif %}
+    </div>
+    <p id="npTitle" style="font-weight: bold;">{{ page.common.title }} </p>
+
+
+
+  </div>
+ </div>
+
+
+<script type="text/javascript">
+  function loadUrl(newLocation) {
+    window.location = newLocation;
+    return false;
+  }
+
+  var mu = document.getElementsByTagName("audio")[0];
+  var pauseButton = document.getElementById("mu_pause");
+  var spincover = document.getElementById("coverart");
+  var fixedplayer = document.getElementById("fixedPlayer");
+
+  mu.addEventListener('ended', function () {
+    // only functional if "loop" is removed
+    mu.pause();
+    mu.currentTime = 0;
+    loadUrl("{{ relBase }}{{ page.next.url }}"); return false;
+  });
+  mu.onplaying = function() {
+    pauseButton.innerHTML = "Pause";
+    fixedplayer.classList.remove("hideplayer");
+
+  }; 
+
+  pauseButton.addEventListener("click", function () {
+    if (mu.paused) {
+      mu.play();
+
+    }
+    else {
+      mu.pause();
+
+
+    }
+  });
+  mu.addEventListener('playing', function () {
+    spincover.classList.add("spinnit");
+    spincover.classList.remove("paused");
+  });
+  mu.addEventListener('pause', function () {
+    spincover.classList.add("paused");
+    pauseButton.innerHTML = "Resume";
+  });
+
+
+</script>

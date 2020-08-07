@@ -1,0 +1,21 @@
+
+- name: Twitter
+  url: https://twitter.com/ToSettoSetto
+  icon: fa-twitter
+  share_link: 'https://twitter.com/share?url={{ site.url }}{{ page.url | xml_escape }}&text={{ page.description | xml_escape }}%20via%20&#64;ToSettoSetto&hashtags=cybersoul'
+  we_have_account: true
+- name: Instagram
+  url: https://www.instagram.com/tosettosetto/
+  icon: fa-instagram
+  share_link: 
+  we_have_account: true
+- name: Telegram
+  url: https://t.me/basspistol
+  icon: fa-telegram
+  share_link: 'https://telegram.me/share/url?url={{ site.url }}{{ page.url }}&text={{ page.description }}%20via%20&#64;basspistol'
+  we_have_account: true
+- name: Reddit
+  url: https://www.reddit.com/r/basspistol
+  icon: fa-reddit
+  share_link: 'https://reddit.com/submit/?url={{ site.url }}{{ page.url }}&title={{ page.title | xml_escape }}'
+  we_have_account: true

@@ -1,9 +1,23 @@
-<!-- BEGIN header.html -->
-<div id="header">
-  <div class="hero">
-    <a href="/">
-      <h1>{{ site.title }}</h1>
-    </a>
+<header class="hero" style="background-image: url({{ page.image }});">
+  <div class="textcontainer">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+    {% if page.category == 'releases' %}
+    <p><a href="#plwrap" class="button">Listen</a></p>
+    {% endif %}
+    {% if page.category == 'ramblings' %}
+    <p><a href="#read" class="button">Read</a></p>
+    {% endif %}
+    {% if page.url == '/404/' %}
+    <p><a href="/" class="button">Take me home</a></p>
+    {% endif %}
   </div>
-</div>
-<!-- END header.html -->
+  <div class="imagecontainer">
+
+  </div>
+  {% if page.video_path %}
+  <video autoplay muted loop id="myVideo">
+    <source src="{{ page.video_path }}" type="video/mp4">
+  </video>
+  {% endif %}
+</header>

@@ -1,0 +1,40 @@
+---
+title: Links
+subtitle: Links
+description: >-
+  Venture outside of your daily web-routine, read about some real projects.
+  These links are way more than just Friends and Resources
+tags:
+  - links
+  - music
+  - record
+  - labels
+  - resources
+  - friends
+image: /images/pages/phone.jpg
+---
+
+{% include relBase.html %}
+{% include header.html %}
+
+{% assign sorted = site.data.links | sort: 'title' %}
+{% for post in sorted %}
+<section class="links" style="margin:0;">
+
+<!-- <div class=linksbg></div> -->
+<div class="description">
+  <h2>{{ post.title }}</h2>
+
+  <p>{{ post.description }}</p>
+<p><a href="{{ post.url }}?ref=ToSettoSetto" class="button" rel="noopener" target="_blank">Visit</a></p>
+</div>
+
+  
+</section>
+
+{% endfor %}
+
+
+
+
+

@@ -1,0 +1,38 @@
+// NAvigation
+
+.logo, #sticky {
+  filter: blur(0px);
+  opacity: 1;
+  background-color: _palette(bg);
+ }
+
+.blurredout {
+  filter: blur(0px);
+  opacity: 1;
+  background-color: _palette(bg);
+  -webkit-transition: all 400ms ease-in;
+  -moz-transition: all 400ms ease-in;
+  transition: all 400ms ease-in;
+ }
+
+.hero {
+  padding-top: 120px;
+}
+
+// Player link
+.player-wrap {
+  display: none;
+}
+.noJSalbum {
+  display: unset;
+  flex: 0 1 400px;
+  border-radius: 5px;
+  width: 100%;
+}
+#fixed-player {
+  display: unset;
+  height: unset;
+}
+.hideWhenNoJS {
+  display: none;
+}
