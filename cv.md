@@ -5,6 +5,7 @@ description: >-
   This is my CV.
 date: 2020-01-27 14:23:00 +0100
 image: /images/siteicon.png
+video_path: /videos/set.mp4
 sitemap: true
 layout: page
 ---
