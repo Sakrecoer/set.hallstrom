@@ -1,7 +1,7 @@
 title: 'Set Hallström'
 description: >- # this means to ignore newlines until "baseurl:"
-  'The Digital CV of Set Hallstrom, a multi-disciplanry Artist, a Free Software
-  advocate and Community Manager.'
+  The Digital CV of Set Hallstrom, a multi-disciplanry Artist, a Free Software
+  advocate and Community Manager.
 
 url: "https://set.hallstrom.ch" # the base hostname & protocol for your site
 permalink: /:categories/:title/
@@ -130,7 +130,7 @@ lang: en
 
 ## Colors
 
-bg:           '#3c2a52'
+bg:           '#0D3B66'
 bg-alt:       'rgba(31, 23, 41, 0.75)'
 fg:           '#ebdbf8'
 fg-alt:       'rgba(235, 219, 248, 0.25)'
