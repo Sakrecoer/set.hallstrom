@@ -1,7 +1,7 @@
 ---
 title: Cookies & Privacy policy
 image: /images/pages/arget-zvhhkivur9m-unsplash.jpg
-description: 'Privacy is important, therefor 徒 setto セット respects it!'
+description: 'Privacy is important, therefor I respects it!'
 sitemap: false
 layout: page
 ---
@@ -21,9 +21,10 @@ Every time you visit the websites managed by the {{ site.publisher.name }}, you 
 
 The websites managed by the {{ site.publisher.name }} mostly use **first-party cookies**. These are cookies set and controlled by the {{ site.publisher.name }}, not by any external organisation.<br>However, to view some of our pages, you will have to accept cookies from external organisations.
 
-The **2 types of first-party cookie** we use are to:
+The **3 types of first-party cookie** we use are to:
 
-* store visitor preferences
+* Secure your connection
+* Store visitor preferences
 * gather analytics data (about user behaviour).
 
 ### 1\. Visitor preferences
@@ -43,9 +44,13 @@ We use these purely for internal research on how we can improve the service we p
 
 **Analytics cookies** are:
 
-**Name**\: \_pk\_id\#<br>**Services**\: Corporate web analytics service, (Matomo open source software)<br>**Purpose**\: Recognises website visitors (**anonymously** – no personal information is collected on the user)<br>**Cookie type and duration**\: First-party persistent cookie, 13 months
+**Name**\: \_pk\_id\#<br>**Services**\: Corporate web analytics service, (Matomo open source software)<br>**Purpose**\: Recognises website visitors (**anonymously** – no personal information is collected on the user)<br>**Cookie type and duration**\: First-party persistent cookie, 2 months
 
 **Name**\: \_pk\_ses\#<br>**Services**\: Corporate web analytics service, (Matomo open source software**)<br>Purpose**\: Identifies the pages viewed by the same user during the same visit. (**anonymously** – no personal information is collected on the user)<br>**Cookie type and duration**\: First-party persistent cookie, 30 minutes
+
+### 3\. Security Cookie
+
+**Name**\: \_cfduid<br>**Services**\: The _cfduid cookie is provided by Cloudflare and helps it detect malicious visitors to our Customers’ websites and minimizes blocking legitimate users. It may be placed on the devices of our customers' End Users to identify individual clients behind a shared IP address and apply security settings on a per-client basis. It is necessary for supporting Cloudflare's security features.
 
 ## Third-party cookies
 

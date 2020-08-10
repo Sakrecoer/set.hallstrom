@@ -1,4 +1,4 @@
-<header class="hero" style="background-image: url({{ page.image }});">
+<header class="hero" {% unless page.video_path %}style="background-image: url({{ page.image }});"{% endunless %}>
   <div class="textcontainer">
     {% unless page.url == '/' %}
     <h1>{{ page.title }}</h1>
