@@ -1,7 +1,7 @@
 title: 'Set Hallström'
 description: >- # this means to ignore newlines until "baseurl:"
-  The Digital CV of Set Hallstrom, a multi-disciplanry Artist, a Free Software
-  advocate and Community Manager.
+  The Digital CV of Set Hallstrom, a multi-disciplinary developer, Artist and Free Software
+  advocate.
 
 url: "https://set.hallstrom.ch" # the base hostname & protocol for your site
 permalink: /:categories/:title/
@@ -26,10 +26,10 @@ geo:
   country: 'Sweden'
   postalcode: '15136'
 
-banner:   /images/setto-logo.svg
-banner-vert: /images/setto_logo.svg
-icon:   /images/setto-logoicon.svg
-logo:   /images/setto-logo.svg
+banner:   /images/set-banner.svg
+banner-vert: /images/set_logo.svg
+icon:   /images/siteicon.svg
+logo:   /images/set-logo.svg
 logo-footer: /images/setto-logo-dark.svg
 
 # mediaurl: /assets/albums
@@ -114,6 +114,11 @@ defaults:
       sitemap:         false
   -
     scope:
+      path: "*.svg"
+    values:
+      layout: 'nil'
+  -
+    scope:
       path: ""
       type: "photos"
     values:
@@ -132,6 +137,8 @@ lang: en
 
 bg:           '#0C0F0A'
 fg:           '#FFFFFF'
+accent1:      '#41EAD4'
+accent2:      '#FF206E'
 
 
 ### PWA
