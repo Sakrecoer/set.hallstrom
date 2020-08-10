@@ -23,8 +23,9 @@
 
 <body>
 <!-- Wrapper -->
+
 <div id="main-wrapper">
-  
+
 {{ content }}
 <!-- Footer -->
 {% unless page.collection == 'tracks' %}
@@ -40,7 +41,11 @@
 {% endunless %}
 {% include cookie-consent.html %}
 {% include scripts.html %}
-
+{% if page.video_path %}
+<video autoplay muted loop poster="{{ page.image }}" class="fullscreen-bg__video">
+  <source src="{{ page.video_path }}" type="video/mp4">
+</video>
+{% endif %}
 </body>
 </html>
 

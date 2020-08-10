@@ -19,6 +19,7 @@ body {
   -webkit-transition: filter 400ms ease-in;
   -moz-transition: filter 400ms ease-in;
   transition: filter 400ms ease-in;
+  z-index: 1;
 
 }
 .content-wrapper {
@@ -91,6 +92,7 @@ section {
   -webkit-box-shadow: inset 0px 23px 25px -25px _palette(border-alt);
   -moz-box-shadow: inset 0px 23px 25px -25px _palette(border-alt);
   box-shadow: inset 0px 23px 25px -25px _palette(border-alt);
+  z-index: 2;
   h2 {
     text-align: center;
   }
@@ -113,6 +115,7 @@ footer {
   background-repeat: repeat-x;
   background-position: top;
   box-sizing: border-box;
+  z-index: 2;
   div {
     flex: 0 1 280px;
     margin:20px;

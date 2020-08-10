@@ -15,7 +15,7 @@
     <a href="#close" title="Close" onclick="removeBlur()" class="close-button">X</a>
     <ul>
       {% if page.url != '/' %}
-      <li><a href="{{ relBase }}/" class="button">🏡 home</a></li>
+      <li><a href="{{ relBase }}/" class="button">home</a></li>
       {% endif %}
       {% for entry in site.data.navigation %}
       {% if entry.external_site == false %}
