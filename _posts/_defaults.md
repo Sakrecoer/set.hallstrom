@@ -3,6 +3,8 @@ title:
 description:
 date:
 image:
+video_path:
 link:
+tags:
 category:
 ---
