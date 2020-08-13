@@ -1,7 +1,7 @@
 ---
 name: Set Hallstrom
 position: Geek
-image: /siteicon.png
+image: /images/pages/snugglebeam.jpg
 url_staff: 'https://set.hallstorm.ch'
 email: set+web@hallstrom.ch
 gpg: >-
