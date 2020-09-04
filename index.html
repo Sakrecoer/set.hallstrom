@@ -70,11 +70,12 @@ sections:
     <div class="container">
 
         <p><a href="tel:+46708134377" class="button">📱 +46 708 134 377</a></p>
-        <p><a style="font-size: 1em;" href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x92401D3F102A0208" class="button">🔐 92401D3F102A0208</a></p>
+        
         {% for shop in site.data.navigation %}
         <a rel="noopener" href="{{ shop.url }}" title="Visit {{ shop.name }}" class="icon" style="margin-left: 0;">{{ shop.icon }}</a>
         {% endfor %}
-
+        <p><a style="font-size: 1em;" href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x92401D3F102A0208" class="button">🔐 92401D3F102A0208</a></p>
+        
     </div>
 
   </div>
