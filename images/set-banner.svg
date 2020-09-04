@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="483.7" height="247.9" version="1.1" viewBox="0 0 128 65.59" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <filter id="filter1159" x="-.002114" y="-.004409" width="1.004" height="1.009" color-interpolation-filters="sRGB">
-   <feGaussianBlur stdDeviation="0.11184803"/>
+  <filter id="filter1159" x="-.01124" y="-.02345" width="1.022" height="1.047" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.59475246"/>
   </filter>
  </defs>
  <g transform="matrix(1.004 0 0 .9816 -19.06 -61.64)" fill="#0c0f0a" filter="url(#filter1159)" opacity=".8">
