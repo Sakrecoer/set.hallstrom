@@ -158,6 +158,7 @@ a:hover {
   -webkit-transition: border var(--anim-speed) ease-in-out, color var(--anim-speed) ease-in-out;
   -ms-transition: border var(--anim-speed) ease-in-out, color var(--anim-speed) ease-in-out;
   transition: border var(--anim-speed) ease-in-out, color var(--anim-speed) ease-in-out;
+  display: inline-block;
 
 }
 .icon:hover {
@@ -207,8 +208,12 @@ a:hover {
     max-width: var(--max-width);
     margin: auto;
   }
-  p {
+  p, ul {
     margin: 20px 0;
+  }
+  ul {
+    list-style-type: circle;
+    list-style-position: inside;
   }
   h2, h3, h4, h5, h6 {
     text-align: left;
