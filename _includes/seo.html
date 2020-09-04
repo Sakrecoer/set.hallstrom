@@ -1,141 +1,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- 
-..............................................  
-.............................................. 
-...........'';,...............................
-.........'',,;:o:,............................ 
-.......',;;::::::;;;,.........................
-.....,;:ooooooooooo;,,''''....................
-....,;ooooooooooooooo;,'..'''''...............             
-...,:ooooooooooooooooo;''......'''............          
-..,;:ooooooooooooooooo',,.........,'..........   _______                         _         _         __
-..,,;:,ooooo;;:ooo;o,:;,',.........;,''.......   \____  \____  _____ __________ |_| ______/ |_  ___ |  |   
-..,'..,,;:o,''.,;;'''..'';,,,,,,''',;'''......    |  | _/\__ \/  __//  __/\___ \| |/  __/\   _\/   \|  |  
-..,'......':ooo:.......'';,'''''''',;,,,......    |  | _/\__ \/  __//  __/\___ \| |/  __/\   _\/   \|  | 
-..,,.......,:o:'.......,'oooo:::::;:,.',;,....    |  | _/\__ \/  __//  __/\___ \| |/  __/\   _\/   \|  | 
-..','.................',,..'',,,;;;;;;,.,:....    |  |  \ / _ \__ \ \__ \ | |_> > |\__ \  | | (  <> )  |__              
-...,,'...............',;oooooooooo:;;:,;oo,...    |____ /(___ /___ >___  >|  __/|_/____ > |_|  \___/|____/ 
-....,,'.............,,;ooooooooo;,..'',oooo,..        \/    \/   \/    \/ |_|         \/     
-.....',,'........',,;ooo::;;,'........'oooo;..  
-.......'',,'''',,;;;,,'...............';;;'...                 All you saw was sound!    
-...........'''''.............................. 
-..............................................  
-..............................................                                                   
-..............................................                             
-..............................................                                               
--->
-{% if page.collection == 'tracks' %}
-<!-- BEGIN seo.html -->
 
-<title>Play {{ page.common.title | xml_escape }} by {{ page.common.artist | xml_escape }} | {{ site.title | xml_escape }}</title>
-<meta name="title" content="Play &quot;{{ page.common.title | xml_escape }}&quot; by {{ page.common.artist | xml_escape }}" />
-<meta name="description" content="A track by {{ page.common.artist | xml_escape }} named &quot;{{ page.common.title | xml_escape }}&quot; published on {{ site.title | xml_escape }}" />
-<meta name="dc.date.modified" scheme="ISO8601" content="{{ page.last_modified_at | date_to_xmlschema }}" />
-<meta name="robots" content="index" />
-
-<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}" />
-<meta name="geo.region" content="{{ site.geo.region }}" />
-<meta name="geo.placename" content="{{ site.geo.town }}" />
-<meta name="geo.position" content="{{ site.geo.lat }};{{ site.geo.long }}" />
-<meta name="ICBM" content="{{ site.geo.lat }}, {{ site.geo.long }}" />
-<meta name="author" content="{{ site.title | xml_escape }}" />
-<meta name="generator" content="Jekyll v4.0.0" />
-
-<!-- Dublin Core basic info -->
-
-<meta name="dcterms.Identifier" content="{{ site.url }}" />
-<meta name="dcterms.Format" content="text/html" />
-<meta name="dcterms.Relation" content="{{ site.title | xml_escape }}" />
-<meta name="dcterms.Publisher" content="{{ site.publisher.name | xml_escape }}" />
-<meta name="dcterms.Type" content="text/html" />
-<meta name="dcterms.Coverage" content="{{ site.url }}/" />
-<meta name="dcterms.Rights" content="Copyright &copy;{{ site.time | date: '%Y' }} {{ site.title }}." />
-<meta name="dcterms.Subject" content="A track by {{ page.common.artist | xml_escape }} named &quot;{{ page.common.title | xml_escape }}&quot; published on {{ site.title | xml_escape }}" />
-<meta name="dcterms.Title" content="Play &quot;{{ page.common.title | xml_escape }}&quot; by {{ page.common.artist | xml_escape }}" />
-<meta name="dcterms.Contributor" content="{{ site.title | xml_escape }}" />
-<meta name="dcterms.Date" content="{{ page.last_modified_at | date: '%Y-%m-%d' }}" />
-<meta name="dcterms.Description" content="Listen and to a track by {{ page.common.artist | xml_escape }} from the release &quot;{{ page.common.album | xml_escape }}&quot; and support your remote artist!" />
-
-<!-- Facebook -->
-
-<meta property="og:title" content="{{ page.common.title | xml_escape }}" />
-<meta property="og:locale" content="en" />
-<meta property="og:description" content="Listen and to a track by {{ page.common.artist | xml_escape }} from the release &quot;{{ page.common.album | xml_escape }}&quot; and support your remote artist!" />
-<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-<meta property="og:site_name" content="{{ site.title | xml_escape }}" />
-<meta property="og:type" content="music:album:track" />
-<meta property="og:audio" content="{{ site.mediaurl }}/{{ page.slug }}.mp3" />
-<meta property="article:published_time" content="{{ page.last_modified_at | date_to_xmlschema }}" />
-<meta property="og:image" content="{{ site.mediaurl }}/{{ page.slug }}.jpeg" />
-<!-- Twitter Card -->
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{ page.common.title | xml_escape }} | {{ site.title | xml_escape }}" />
-<meta name="twitter:description" content="Listen and to a track by {{ page.common.artist | xml_escape }} from the release &quot;{{ page.common.album | xml_escape }}&quot; and support your remote artist!" />
-<meta name="twitter:image" content="{{ site.mediaurl }}/{{ page.slug }}.jpeg" />
-
-
-{% elsif page.collection == 'posts' %}
-{% if page.category == 'releases' %}
-
-{% for album in site.albums %}
-{% if album.slug == page.album %}
-<!-- BEGIN seo.html -->
-{% capture namelist %}{% for art in album.artists %}{{ art }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
-{% capture artist %}{{ namelist }}{% endcapture %}
-
-<title>Play &quot;{{ album.name | xml_escape }}&quot; by {{ artist | xml_escape | uniq }} | {{ site.title | xml_escape }}</title>
-<meta name="title" content="Play &quot;{{ album.name | xml_escape }}&quot; by {{ artist | xml_escape | uniq }}" />
-<meta name="description" content="A release by {{ artist | xml_escape | uniq }} named &quot;{{ album.name | xml_escape }}&quot; published on {{ site.title | xml_escape }}" />
-<meta name="dc.date.modified" scheme="ISO8601" content="{{ page.last_modified_at | date_to_xmlschema }}" />
-<meta name="robots" content="index" />
-
-<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}" />
-<meta name="geo.region" content="{{ site.geo.region }}" />
-<meta name="geo.placename" content="{{ site.geo.town }}" />
-<meta name="geo.position" content="{{ site.geo.lat }};{{ site.geo.long }}" />
-<meta name="ICBM" content="{{ site.geo.lat }}, {{ site.geo.long }}" />
-<meta name="author" content="{{ site.title | xml_escape }}" />
-<meta name="generator" content="Jekyll v4.0.0" />
-
-<!-- Dublin Core basic info -->
-
-<meta name="dcterms.Identifier" content="{{ site.url }}" />
-<meta name="dcterms.Format" content="text/html" />
-<meta name="dcterms.Relation" content="{{ site.title | xml_escape }}" />
-<meta name="dcterms.Publisher" content="{{ site.publisher.name | xml_escape }}" />
-<meta name="dcterms.Type" content="text/html" />
-<meta name="dcterms.Coverage" content="{{ site.url }}/" />
-<meta name="dcterms.Rights" content="Copyright &copy;{{ site.time | date: '%Y' }} {{ site.title }}." />
-<meta name="dcterms.Subject" content="A release by {{ artist | xml_escape | uniq }} named &quot;{{ album.name | xml_escape }}&quot; published on {{ site.title | xml_escape }}" />
-<meta name="dcterms.Title" content="Play &quot;{{ album.name | xml_escape }}&quot; by {{ artist | xml_escape | uniq }}" />
-<meta name="dcterms.Contributor" content="{{ site.title | xml_escape }}" />
-<meta name="dcterms.Date" content="{{ page.date | date: '%Y-%m-%d' }}" />
-<meta name="dcterms.Description" content="Listen and to a release by {{ artist | xml_escape | uniq }} named &quot;{{ album.name | xml_escape }}&quot; and support your remote artist!" />
-
-<!-- Facebook -->
-
-<meta property="og:title" content="{{ album.name | xml_escape }} by {{ artist | xml_escape | uniq }}" />
-<meta property="og:locale" content="en" />
-<meta property="og:description" content="Listen and to a release by {{ artist | xml_escape | uniq }} named &quot;{{ album.name | xml_escape }}&quot; and support your remote artist!" />
-<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-<meta property="og:site_name" content="{{ site.title | xml_escape }}" />
-<meta property="og:type" content="music:album" />
-{% for track in album.tracks %}<meta property="og:audio" content="{{ site.mediaurl }}/{{ track.albumSlug }}/{{ track.trackSlug }}.mp3" />{% endfor %}
-<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
-<meta property="og:image" content="{{ site.mediaurl }}/{{ album.tracks[0].slug }}.jpeg" />
-
-<!-- Twitter Card -->
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{ album.name | xml_escape }} | {{ site.title | xml_escape }}" />
-<meta name="twitter:description" content="Listen and to a release by {{ artist | uniq }} named &quot;{{ album.name | xml_escape }}&quot; and support your remote artist!" />
-<meta name="twitter:image" content="{{ site.mediaurl }}/{{ album.tracks[0].slug }}.jpeg" />
-{% endif %}{% endfor %}
-{% elsif page.category == 'ramblings' %}
+{% if page.collection == 'posts' %}
 <!-- BEGIN seo.html -->
 
 <title>{{ page.title }} | {{ site.title }}</title>
@@ -210,7 +76,7 @@
     }
   }
 </script>
-{% endif %}
+
 {% else %}
 <!-- BEGIN seo.html -->
 

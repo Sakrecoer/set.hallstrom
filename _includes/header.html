@@ -1,26 +1,31 @@
-<header class="hero" {% unless page.video_path %}style="background-image: url({{ page.image }});"{% endunless %}>
-  <div class="textcontainer">
-    {% unless page.url == '/' %}
-    <h1>{{ page.title }}</h1>
- 
-    <p>{{ page.description }}</p>
-    {% else %}
-    <h1>{{ site.title }}</h1>
- 
-    <p>{{ page.title }}</p>
-    {% endunless %}
-    {% if page.category == 'releases' %}
-    <p><a href="#plwrap" class="button">Listen</a></p>
-    {% endif %}
-    {% if page.category == 'ramblings' %}
-    <p><a href="#read" class="button">Read</a></p>
-    {% endif %}
-    {% if page.url == '/404/' or page.url == '/contact-success/' %}
-    <p><a href="/" class="button">Take me home</a></p>
-    {% endif %}
-  </div>
+{% include relBase.html %}
+<header class="hero" id="top" {% unless page.video_path %}style="background-image: url({{ page.image }});"{% endunless %}>
+
   <div class="imagecontainer">
-
+    <img width="100%" src="{{ site.banner }}" title="{{ site.title }} Site banner" />
   </div>
+  <section class="splash">
 
+    <div>
+  
+      <h1>{{ page.title }}</h1>
+  
+      <p>
+        {{ page.description }}
+      </p>
+      {% if page.url == '/404/' or page.url == '/contact-success/' %}
+   
+        <p><a href="/" class="button">Ta mig tillbaka</a></p>
+      
+      {% else %}
+      <p><a href="#read" class="button">Hej!</a></p>
+      {% endif %}
+    </div>
+  </section>
 </header>
+
+
+
+
+
+

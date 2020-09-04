@@ -6,24 +6,26 @@ body {
 body {
   height: 100vh;
   width: 100%;
-  font-family: _font(family-fixed);
-  color: _palette(fg);
+  font-family: _font(family);
+  font-weight: 300;
+  color: var(--fg);
   letter-spacing: _font(kerning);
-  background-color: _palette(bg);
+  background-color: var(--bg);
 
 }
 #main-wrapper {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  -webkit-transition: filter 400ms ease-in;
-  -moz-transition: filter 400ms ease-in;
-  transition: filter 400ms ease-in;
+  -webkit-transition: filter var(--anim-speed) ease-in;
+  -moz-transition: filter var(--anim-speed) ease-in;
+  -ms-transition: filter var(--anim-speed) ease-in-out;
+  transition: filter var(--anim-speed) ease-in;
   z-index: 1;
 
 }
 .content-wrapper {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: auto;
 }
 .wrapper {
@@ -34,19 +36,19 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
-  background-color: _palette(bg);
+  background-color: var(--bg);
   justify-content: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 40px;
   position: relative;
-  min-height: 75vh; 
+  min-height: 100vh; 
   width: 100vw;
 
   .textcontainer {
-    background-color: _palette(bg-alt);
-    border-radius: 5px;
+    background-color: var(--bg-alt);
+    border-radius: var(--border-radius);
     max-width: 700px;
     padding: 20px 20px 40px 20px;
   }
@@ -57,18 +59,15 @@ body {
       flex: 1 0 100%;
       width: 100%;
       z-index: 10;
-      color: _palette(fg);
-      text-align: center;
-      max-width: 1200px;
-    }
-    p{
+      color: var(--fg);
+      max-width: var(--max-width);
       margin-top: 40px;
     }
+
     h1 {
       font-size: 1.8em;
     }
   }
-
   .imagecontainer {
     position: absolute;
     top: 0;
@@ -76,22 +75,20 @@ body {
     width: 100%;
     height: 100%;
     background-image: url('../img/vignette.svg');
-    background-size: 480px 480px;
+    background-size: 100%;
     background-repeat: repeat-x;
     background-position: bottom;
     z-index: 1;
- 
   }
-
 }
 
 section {
   flex: 1 1 100%;
-  padding: 20px;
-  background-color: _palette(bg);
-  -webkit-box-shadow: inset 0px 23px 25px -25px _palette(border-alt);
-  -moz-box-shadow: inset 0px 23px 25px -25px _palette(border-alt);
-  box-shadow: inset 0px 23px 25px -25px _palette(border-alt);
+  padding: 80px 20px 80px 20px;
+  background-color: var(--bg);
+  -webkit-box-shadow: inset 0px 12px 32px -25px var(--border-alt);
+  -moz-box-shadow: inset 0px 12px 32px -25px var(--border-alt);
+  box-shadow: inset 0px 12px 32px -25px var(--border-alt);
   z-index: 2;
   h2 {
     text-align: center;
@@ -105,42 +102,61 @@ section:first-of-type {
   padding-top: 40px;
 }
 footer {
-  display: flex;
-  flex-wrap: wrap;
+
   width: 100%;
   padding: 160px 20px 200px 20px;
-  background-color: _palette(fg);
-  color: _palette(bg);
-  justify-content: center;
+  background-color: var(--fg);
+  color: var(--bg);
   background-image: url('../img/vignette-footer.svg');
-  background-size: 480px 480px;
+  background-size: 450px;
   background-repeat: repeat-x;
   background-position: top;
   box-sizing: border-box;
   z-index: 2;
-  div {
-    flex: 0 1 280px;
-    margin:20px;
-    img {
-      margin: auto;
-      display: block
+  .footframe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 20px;
+  
+    div {
+      flex: 0 1 300px;
+      margin-bottom: 80px;
+      img {
+        margin: auto;
+        display: block;
+        width: 100%;
+      }
+      li {
+        border-bottom: 1px solid var(--bg-alt);
+        line-height: 2;
+        font-size: 1.5em;
+        a {
+          font-weight: 700;
+          text-decoration: none;
+        }
+      }
     }
-    li {
-      border-bottom: 1px solid _palette(bg-alt);
-      line-height: 2;
-      font-size: 1.5em;
-      a {
-        font-weight: 700;
-        text-decoration: none;
+  
+    small {
+      flex: 0 0 100%;
+      box-sizing: border-box;
+      margin: 0;
+      text-align: center;
+      font-size: 0.8em;
+      .label {
+        display: none;
       }
     }
   }
-  small {
-    flex: 0 0 100%;
-    margin: 20px;
-    text-align: center;
-    .label {
-      display: none;
+  @media only screen and (max-width: 679px) {
+    .footframe {
+      justify-content: center;
+      div {
+        flex-grow: 1;
+      }
     }
   }
 }

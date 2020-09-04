@@ -1,35 +1,38 @@
 ---
 layout: default
 ---
+{% include header.html %}
+<section class="info" id="read">
+  <div class="info-pages">
+    {{ content }}
+  </div>
+</section>
+{% if page.collection == 'posts' %}
+<!-- post Naviation -->
+<section class="post-navigation">
+  {% if page.previous.url or page.next.url %}
+  <h2>Post Navigation</h2>
+  <div class="post-nav">
 
-  {% include header.html %}
-  <section class="info" id="read">
-    <div style="margin-top: 80px;">
-      {{ content }}
-      <p>&nbsp;</p>
-      <p style="text-align: center;"><a href="{{ page.link }}" class="button">Check it out</a></p>
-    </div>
-  </section>
-  
-  <!-- post Naviation -->
-  <section class="post-navigation">
-    {% if page.previous.url or page.next.url %}
-    <h2>Post Navigation</h2>
-    <div class="post-nav">
-      
-        {% if page.previous.url %}
-        <h3><a href="{{page.previous.url}}" alt="Read {{page.previous.title}}" title="Read {{page.previous.title}}"><span
-              class="fas fa-arrow-left"></span>&nbsp;{{page.previous.title}}</a></h3>
-        
-        <p>{{ page.previous.description }}</p>
-        {% endif %}
-      </div>
-      <div class="post-nav-next">
-        {% if page.next.url%}
-        <h3><a href="{{page.next.url}}">{{page.next.title}}&nbsp;<span class="fas fa-arrow-right"></span></a></h3>
+    {% if page.previous.url %}
+    <h3>
+      <a href="{{page.previous.url}}" alt="Read {{page.previous.title}}" title="Read {{page.previous.title}}">
+        <span class="fas fa-arrow-left"></span>&nbsp;{{page.previous.title}}
+      </a>
+    </h3>
 
-        <p>{{ page.next.description }}</p>
-        {% endif %}
-      </div>
+    <p>{{ page.previous.description }}</p>
+    {% endif %}
+  </div>
+  <div class="post-nav-next">
+    {% if page.next.url%}
+    <h3><a href="{{page.next.url}}">{{page.next.title}}&nbsp;<span class="fas fa-arrow-right"></span></a></h3>
+
+    <p>{{ page.next.description }}</p>
+    {% endif %}
+  </div>
   {% endif %}
-  </section>
+</section>
+{% endif %}
+<!-- END post Naviation -->
+{% include ethos.html %}

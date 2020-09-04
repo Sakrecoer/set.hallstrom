@@ -1,0 +1,31 @@
+<section id="ethossection">
+  <h2 class="editable">
+    Kategorier
+    
+  </h2>
+  <p style="text-align:center" class="editor-link"><a href="cloudcannon:collections/_data/ethos_ordning.yml" rel="nofollow" class="btn"><strong>&#9998;</strong>
+      Edit order</a></p><br />
+  <div class="ethos-flex">
+
+    {% for etho_name in site.data.ethos_ordning %}{% for etho in site.ethos %}
+    {% capture name -%}{{ etho.relative_path | replace_first: etho.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}{%- endcapture %}
+    {% if name == etho_name %}
+    <div class="ethos">
+        <div class="icon">
+          <a href="{{ etho.url }}" alt="{{ etho.title }}" class="st1">
+              {% capture name -%}{{ etho.relative_path | replace_first: etho.collection, '' | replace_first: '_/', '' | replace_first: '.md', '' }}{%- endcapture %}
+              {% include ethoicon-selector.html icon=name %}
+          </a>
+        
+        </div>
+        <div class="cartouche">
+          <h3>{{ etho.title }}</h3>
+          <p>{{ etho.description }}</p>
+          <p class="editor-link"><a href="cloudcannon:collections/{{ etho.path }}" rel="nofollow" class="btn"><strong>&#9998;</strong>
+            Edit Ethos</a></p>
+        </div>
+      </div>
+    {% break %} {% endif %} {% endfor %} {% endfor %}
+  </div>
+</section>
+

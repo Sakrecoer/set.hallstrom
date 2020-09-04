@@ -11,21 +11,19 @@
   position: fixed;
   top:0;
   width: 100%;
-  height: 80px;
+  height: 60px;
   z-index: 100;
-  -webkit-transition: all 400ms ease-in;
-  -moz-transition: all 400ms ease-in;
-  transition: all 400ms ease-in;
+  -webkit-transition: all var(--anim-speed) ease-in;
+  -moz-transition: all var(--anim-speed) ease-in;
+  -ms-transition: all var(--anim-speed) ease-in;
+  transition: all var(--anim-speed) ease-in;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 95% 95%;
-  -webkit-transition: all 400ms ease-in;
-  -moz-transition: all 400ms ease-in;
-  transition: all 400ms ease-in;
-  -webkit-box-shadow: 0px 3px 29px 0px _palette(border-alt);
-  -moz-box-shadow: 0px 3px 29px 0px _palette(border-alt);
-  box-shadow: 0px 3px 29px 0px _palette(border-alt);
+  -webkit-box-shadow: 0px 12px 32px -25px var(--border-alt);
+  -moz-box-shadow: 0px 12px 32px -25px var(--border-alt);
+  box-shadow: 0px 12px 32px -25px var(--border-alt);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -39,25 +37,27 @@
 .logo:hover {
   filter: blur(0px);
   opacity: 1;
-  -webkit-transition: all 400ms ease-in;
-  -moz-transition: all 400ms ease-in;
-  transition: all 400ms ease-in;
-  background-color: _palette(bg);
+  -webkit-transition: all var(--anim-speed) ease-in;
+  -moz-transition: all var(--anim-speed) ease-in;
+  -ms-transition: all var(--anim-speed) ease-in;
+  transition: all var(--anim-speed) ease-in;
+  background-color: var(--bg);
 
 }
 .sticky {
   filter: blur(0px);
   opacity: 1;
-  background-color: _palette(bg);
-  -webkit-transition: all 400ms ease-in;
-  -moz-transition: all 400ms ease-in;
-  transition: all 400ms ease-in;
+  background-color: var(--bg);
+  -webkit-transition: all var(--anim-speed) ease-in;
+  -moz-transition: all var(--anim-speed) ease-in;
+  -ms-transition: all var(--anim-speed) ease-in;
+  transition: all var(--anim-speed) ease-in;
 
  }
 .navmenu {
   margin: 0 40px 0 20px;
   font-size: 34px;
-  color:_palette(accent1);
+  color:var(--accent1);
 }
  
  
@@ -69,8 +69,8 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: _palette(bg);
-  border-radius: 5px;
+  background-color: var(--bg);
+  border-radius: var(--border-radius);
   display: flex;
   flex-wrap: wrap;
   ul {
@@ -90,12 +90,12 @@ nav {
     }
   }
  }
- .blurredout {
-  filter: blur(5px);
-  -webkit-transition: filter 400ms ease-in;
-  -moz-transition: filter 400ms ease-in;
-  transition: filter 400ms ease-in;
- }
+ //.blurredout {
+  // filter: blur(5px);
+  // -webkit-transition: filter var(--anim-speed) ease-in;
+  // -moz-transition: filter var(--anim-speed) ease-in;
+  // transition: filter var(--anim-speed) ease-in;
+ // }
 
 .modalDialog {
   position: fixed;
@@ -103,12 +103,13 @@ nav {
   right: 0;
   bottom: 0;
   left: 0;
-  background: _palette(bg-alt);
+  background: var(--bg-alt);
   z-index: 10;
   opacity:0;
-  -webkit-transition: opacity 400ms ease-in;
-  -moz-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
+  -webkit-transition: opacity var(--anim-speed) ease-in;
+  -moz-transition: opacity var(--anim-speed) ease-in;
+  -ms-transition: opacity var(--anim-speed) ease-in;
+  transition: opacity var(--anim-speed) ease-in;
   pointer-events: none;
   
 }
@@ -125,16 +126,13 @@ nav {
   position: relative;
   margin: 100px auto;
   padding: 20px;
-  border-radius: 3px;
-  background: rgb(0, 31, 36);
-  background: -moz-linear-gradient(_palette(border), _palette(bg));
-  background: -webkit-linear-gradient(_palette(border), _palette(bg));
-  background: -o-linear-gradient(_palette(border), _palette(bg));
+  border-radius: var(--border-radius);
+
 }
 
 .close-button {
-  background-color: _palette(accent2);
-  color: _palette(accent1);
+  background-color: var(--accent2);
+  color: var(--accent1);
   margin: 0 auto;
   line-height: 48px;
   position: absolute;
@@ -146,12 +144,15 @@ nav {
   text-decoration: none;
   font-weight: bold;
   border-radius: 48px;
-  transition: all 400ms ease-in;
+  -webkit-transition: all var(--anim-speed) ease-in;
+  -moz-transition: all var(--anim-speed) ease-in;
+  -ms-transition: all var(--anim-speed) ease-in;
+  transition: all var(--anim-speed) ease-in;
 }
 
 .close-button:hover {   
-  background-color: _palette(accent1); 
-  color: _palette(accent2);
+  background-color: var(--accent1); 
+  color: var(--accent2);
 
 }
 

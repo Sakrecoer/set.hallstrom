@@ -3,9 +3,11 @@ layout: default
 ---
 {% include relBase.html %}
 {% include header.html %}
-<section class="info">
-<div class="info-pages">
-{{ content }}
-
-</div>
+<section class="info" id="read">
+  <div class="info-pages">
+    {{ content }}
+  </div>
 </section>
+{% if page.url == '/fr-fretag/' %}
+{% include contact.html %}
+{% endif %}

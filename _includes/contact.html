@@ -1,35 +1,45 @@
 <!-- BEGIN contact.html -->
-<div id="contact">
-  <form action="{{ relBase }}/contact-success/" method="post" class="contact-form">
-    <div>
-      <h2>Drop me a line!</h2>
-      <input type="hidden" name="_to" value="set+website@hallstrom.ch" /><br />
-      <input type="text" name="_gotcha" style="display: none;" />
-    </div>
-    <div>
-      <label for="email" style="display: none;">Email Address</label><br />
-      <input type="email" name="email" id="email" placeholder="Enter your email..." required class="contact" />
-    </div>
-    <div>
-      <label for="message" style="display: none;">Message</label><br />
-      <textarea name="message" id="message" placeholder="Write me a poem or enter your message..." required
-        class="contact textspace"></textarea>
-    </div>
-    <br />
-    <div>
-      <input type="checkbox" name="consent" id="consent" required class="css-checkbox lrg klaus" /><label for="consent"
-        class="css-label lrg klaus">I agree with the <a href="/cookies/">privacy policy.</a>
-</label>
-    </div>
-    <br />
-    <div>
-      <input type="checkbox" name="news" id="news" class="css-checkbox lrg klaus" /><label for="news"
-        class="css-label lrg klaus">Send me news!</label>
-    </div>
-    <br />
-    <div>
-      <input type="submit" value="Send Message" />
-    </div>
-  </form>
-</div>
+<section id="contact">
+  <div>
+    <form action="{{ relBase }}/contact-success/" method="post" class="contact-form">
+      <div>
+        <h2>Contact me!</h2>
+        <input type="hidden" name="_to" value="{{ site.publisher.mail }}" /><br />
+        <input type="text" name="_gotcha" style="display: none;" />
+      </div>
+      <div class="contact-info">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email..." required class="contact" />
+       
+        <label for="phone">Phone</label>
+        <input type="tel" name="telephone" id="telephone" placeholder="Phone..."
+          class="contact" />
+        <label for="name">Name</label>
+        <input type="name" name="name" id="name" placeholder="Name..." required class="contact" />
+
+
+      </div>
+      <div>
+        <label for="message">Message</label><br />
+        <textarea name="message" id="message" placeholder="Write a poem..." required
+          class="contact textspace"></textarea>
+      </div>
+      <br />
+      <div>
+        <input type="checkbox" name="consent" id="consent" required class="css-checkbox lrg klaus" /><label
+          for="consent" class="css-label lrg klaus">I agree to the<a href="/cookies/">privacy policy</a>
+        </label>
+      </div>
+      <br />
+      <div>
+        <input type="checkbox" name="news" id="news" class="css-checkbox lrg klaus" /><label for="news"
+          class="css-label lrg klaus">Send me news!</label>
+      </div>
+      <br />
+      <div>
+        <input type="submit" class="button" value="Send Message" />
+      </div>
+    </form>
+  </div>
+</section>
 <!-- END contact.html -->

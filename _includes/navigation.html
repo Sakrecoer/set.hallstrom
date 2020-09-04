@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <div id="sticky" class="logo{% if page.collection == 'tracks' %} sticky{% endif %}">
 
-  <a id="logo" href="/"><img height="40px" src="{{ site.banner }}" alt="{{ site.title }} Logo" /></a>
+  <a id="logo" {% if page.url != '/' %}href="/"{% else %}href="#top"{% endif %}><img height="32px" src="{{ site.logo }}" alt="{{ site.title }} Logo" /></a>
   <a href="#navbar" onclick="blurBody()" alt="Navigation Menu" title="Navigation Menu"><span
       class="fas fa-bars navmenu"></span></a>
 
@@ -15,13 +15,13 @@
     <a href="#close" title="Close" onclick="removeBlur()" class="close-button">X</a>
     <ul>
       {% if page.url != '/' %}
-      <li><a href="{{ relBase }}/" class="button">home</a></li>
+      <li><a href="{{ relBase }}/" onclick="removeBlur()" class="button">home</a></li>
       {% endif %}
       {% for entry in site.data.navigation %}
       {% if entry.external_site == false %}
-      <li><a href="{{ relBase }}{{ entry.url }}" class="button">{{ entry.name }}</a></li>
+      <li><a href="{{ relBase }}{{ entry.url }}" onclick="removeBlur()" class="button">{{ entry.name }}</a></li>
       {% else %}
-      <li><a href="{{ entry.url }}" target="_blank" rel="noopener" class="button">{{ entry.name }}</a></li>
+      <li><a href="{{ entry.url }}" target="_blank" rel="noopener" onclick="removeBlur()" class="button">{{ entry.name }}</a></li>
       {% endif %}
       {% endfor %}
 

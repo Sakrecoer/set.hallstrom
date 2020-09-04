@@ -5,8 +5,8 @@ layout: nil
 <svg width="480" height="480" version="1.1" viewBox="0 0 127 127" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <linearGradient id="linearGradient857" x1="30.295" x2="30.295" y1="120.88" y2="63.5" gradientTransform="scale(3.7795)" gradientUnits="userSpaceOnUse">
-   <stop stop-color="{{ site.bg }}" offset="0"/>
-   <stop stop-color="{{ site.bg }}" stop-opacity="0" offset="1"/>
+   <stop stop-color="{{ site.data.colors.bg_color }}" offset="0"/>
+   <stop stop-color="{{ site.data.colors.bg_color }}" stop-opacity="0" offset="1"/>
   </linearGradient>
   <linearGradient id="linearGradient5491" x1="-1.7764e-15" x2="-1.7764e-15" y1="127" y2="-7.1054e-15" gradientTransform="matrix(1 0 0 .8654 0 17.094)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient857"/>
  </defs>

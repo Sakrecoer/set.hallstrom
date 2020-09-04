@@ -1,0 +1,9 @@
+#linearGradient2060 {
+  stop { 
+    stop-color: var(--accent2);
+  }
+  stop:nth-child(even){
+    stop-color: var(--fg);
+  }
+
+}

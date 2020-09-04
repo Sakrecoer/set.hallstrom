@@ -1,0 +1,98 @@
+#ethossection {
+  padding: 80px 40px;
+  .ethos-flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: auto;
+
+
+  }
+  .ethos {
+    flex: 1 1 320px;
+    min-width: 450px;
+    height: 100%;
+
+    flex-direction: row;
+    -webkit-transition: all var(--anim-speed) ease-in;
+    -moz-transition: all var(--anim-speed) ease-in;
+    -ms-transition: all var(--anim-speed) ease-in;
+    transition: all var(--anim-speed) ease-in;
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    align-self: baseline;
+    justify-content: flex-start;
+    .mobile-hide{
+      display: none;
+    }
+
+    .cartouche, {
+      background-color: var(--bg);
+      width: 100%;
+      height: unset;
+      margin: 20px 0 20px 20px;
+      display: block;
+      border-radius: var(--border-radius);
+      
+    }
+
+    .icon {
+      flex: 0 0 100px;
+      width: 100px;
+      height: 100px;
+      border-radius: 200px;
+      margin: 20px 20px 20px 0;
+    }
+
+
+  }
+  .ethos:nth-child(odd) {
+    .cartouche {
+      padding-right: 20px;
+    }
+  }
+  @media only screen and (max-width: 769px) {
+    .ethos {
+      flex: 0 0 auto;
+      flex-wrap: wrap;
+      min-width: unset;
+      max-width: unset;
+      justify-content: space-between;
+      margin: 20px;
+      .cartouche {
+        display: none;
+      }
+      .icon {
+        margin:0;
+        flex: 0 0 70px;
+        width: 70px;
+        height: 70px;
+        border-radius: 200px;
+      }
+    }
+  }
+  .st1 {
+    fill:var(--accent2);
+    -webkit-transition: all var(--anim-speed) ease-in;
+    -moz-transition: all var(--anim-speed) ease-in;
+    -ms-transition: all var(--anim-speed) ease-in;
+    transition: all var(--anim-speed) ease-in;
+  }
+  .st1:hover {
+    fill:var(--accent1);
+  }
+  
+  .st2 {animation: col 15s ease-in-out infinite;}
+  
+  @keyframes col {
+  0% {fill:var(--accent2);}
+  50% {fill:var(--accent1);}
+  100% {fill:var(--accent2);}
+
+  }
+}
+

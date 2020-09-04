@@ -1,26 +1,26 @@
 <!-- Footer -->
-{% unless page.collection == 'tracks' %}
-
-{% endunless %}
 <footer>
-  <div>
-    <h3>{{ site.title }}</h3>
-    <p>{{ site.description }}</p>
-    <ul>
-      {% if page.url != '/' %}
-      <li><a href="{{ relBase }}/">🏡 Home</a></li>
-      {% endif %}
-      {% for entry in site.data.navigation %}
-      <li><a href="{{ entry.url }}"{% if entry.external_site == true %} target="_blank" rel="noopener"{% endif %}>{{ entry.icon }} {{ entry.name }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div><img src="{{ relBase }}{{ site.banner-vert }}" width="100%" alt="{{ site.title }} Logo" /></div>
+  <div class="footframe">
+    <div>
+      <h3>{{ site.title }}</h3>
+      <p>{{ site.description }}</p>
+      <ul>
+        {% if page.url != '/' %}
+        <li><a href="{{ relBase }}/">🏡 Home</a></li>
+        {% endif %}
+        {% for entry in site.data.navigation %}
+        <li><a href="{{ entry.url }}" {% if entry.external_site == true %} target="_blank" rel="noopener"
+            {% endif %}>{{ entry.icon }} {{ entry.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div><a href="#main-wrapper"><img src="{{ relBase }}{{ site.icon }}" alt="{{ site.title }} Logo" /></a></div>
 
-  <small>
+    <small>
 
-    <p>&copy;{{ site.time | date: '%Y' }} {{ site.publisher.name }} | <a href="{{ relBase }}/webcreds/">Credits</a> | <a
-        href="{{ relBase }}/cookies/">Cookies & Privacy</a> 
+      <p>&copy;{{ site.time | date: '%Y' }} {{ site.publisher.name }} | <a href="{{ relBase }}/webcreds/">Credits</a> |
+        <a href="{{ relBase }}/cookies/">Cookies & Privacy</a>
         <br />This page was last updated on {{ page.last_modified_at | date: "%A, %b %d, %Y" }}</p>
-  </small>
+    </small>
+  </div>
 </footer>

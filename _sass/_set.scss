@@ -6,7 +6,7 @@
   padding-top: 30px;
  .btn {
    border: 0;
-   border-radius: 2px;
+   border-radius: var(--border-radius);
    width: 100%;
    max-width: 500px;
    box-sizing: border-box;

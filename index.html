@@ -1,54 +1,101 @@
 ---
-title: Multidisciplinary humanoid
+title: Multi-disciplinary humanoid
 description: >-
   The Digital CV of Set Hallstrom. Multi-disciplinary creative humanoïd, Free Software
   advocate and Community Manager.
 image: /images/pages/snugglebeam.jpg
 video_path: /videos/set.mp4
+sections:
+  - text_html: >-
+      <h3>Welcome!</h3><p>Glad you're here!</p>
+    image: /images/pages/snugglebeam2.jpg
+    link: 
+        url: '/CV'
+        label: Check my CV
 
 ---
 {% include relBase.html %}
-{% include header.html %}
+
+<header class="hero" id="top"
+  style="{% unless page.video_path %}background-image: url({{ page.image }});{% endunless %}">
+
+  <div class="imagecontainer">
+    <img width="100%" src="{{ site.banner }}" title="{{ site.title }} Site banner" />
+  </div>
+  <section class="splash">
+    <div>
+  
+      <h1>{{ page.title }}</h1>
+      <p><strong>{{ page.description }}</strong></p>
+      <p><a href="#section1" class="button">Hej!</a></p>
+    </div>
+  </section>
+
+</header>
+
+
+
+{% for section in page.sections %}
+
+<section id="section{{ forloop.index }}" class="front-section">
+
+  <div style="background-image:url({{ section.image }})">
+    <p class="editor-link"><a href="cloudcannon:#sections[{{ forloop.index | minus: 1 }}]" rel="nofollow"
+        class="btn"><strong>&#9998;</strong> Edit Section</a></p>
+  </div>
+  <div class="description">
+    <div class="container">
+      <div class="">
+        {{ section.text_html }}
+      </div>
+      {% if section.link %}
+      <div>
+        <p><a class="button" href="{{ section.link.url }}">{{ section.link.label}}</a></p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+</section>
+{% endfor %}
+<section class="front-section">
+
+  <div style="background-image:url(/images/pages/snugglebeam.jpg)">
+    <p class="editor-link"><a href="cloudcannon:#sections[{{ forloop.index | minus: 1 }}]" rel="nofollow"
+        class="btn"><strong>&#9998;</strong> Edit Section</a></p>
+  </div>
+  <div class="description">
+
+
+    <div class="container">
+
+        <p><a href="tel:+46708134377" class="button">📱 +46 708 134 377</a></p>
+        <p><a style="font-size: 1em;" href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x92401D3F102A0208" class="button">🔐 92401D3F102A0208</a></p>
+        {% for shop in site.data.navigation %}
+        <a rel="noopener" href="{{ shop.url }}" title="Visit {{ shop.name }}" class="icon" style="margin-left: 0;">{{ shop.icon }}</a>
+        {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
 {% for post in site.posts limit: 1 %}
 
 <section class="news">
-  <h2>Latest News</h2>
-<div style="background-image:url({{ relBase }}{{ post.image }}"></div>
-<div class="description">
-  <h2>{{ post.title }}</h2>
-  <p><strong>{% include forloop-dates.html %}</strong></p>
-  <p>{{ post.description }}</p>
-<p><a href="{{ relBase }}{{ post.url }}" class="button">Read post</a></p>
-</div>
 
-  
+  <h2>Latest News</h2>
+  <div style="background-image:url({{ relBase }}{{ post.image }}"></div>
+  <div class="description">
+    <h2>{{ post.title }}</h2>
+    <p><strong>{% include forloop-dates.html %}</strong></p>
+    <p>{{ post.description }}</p>
+    <p><a href="{{ relBase }}{{ post.url }}" class="button">Read post</a></p>
+  </div>
+
+
 </section>
 {% endfor %}
-<section class="releases">
+{% include contact.html %}
 
-
-  <article>
-    <h4>{{ page.description }}</h4>
-    <p><a href="/cv/" class="button">check my CV</a></p>
-    <p>📱 <a href="tel:+46708134377">+46 708 134 377</a></p>
-    <p>🔐 <a style="font-size: 1em;" href="http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x92401D3F102A0208">GPG-ID 92401D3F102A0208</a></p>
-  
-  </article>
-
-  <article>
-
-    <div class="streamer">
-      {% for shop in site.data.navigation %}
-  
-      <a rel="noopener" href="{{ shop.url }}" title="Visit {{ shop.name }}" class="icon">{{ shop.icon }}</a>
-  
-      {% endfor %}
-    </div>
-  </article>
-
-
-</section>
-<section class="releases">
-  {% include contact.html %}
-
-</section>
