@@ -6,7 +6,7 @@ sitemap: false
 layout: page
 ---
 
-To improve our marketing efforts, we at {{ site.publisher.name }} sometimes place small data files called cookies on your device. However this site will work perfectly without them. We do however use anonymised analytics of the site-usage regardless of cookies (see bellow if you want to opt out of this too) This usage-data contain no identifiable information.
+To improve our marketing efforts, we at {{ site.publisher.name }} sometimes place small data files called cookies on your device. This site will work perfectly without them. We do however use anonymized analytics of the site-usage regardless of cookies (see bellow if you want to opt out of this too) This usage-data contain no identifiable information.
 
 ## What are cookies?
 
@@ -50,7 +50,7 @@ We use these purely for internal research on how we can improve the service we p
 
 ### 3\. Security Cookie
 
-**Name**\: \_cfduid<br>**Services**\: The _cfduid cookie is provided by Cloudflare and helps it detect malicious visitors to our Customers’ websites and minimizes blocking legitimate users. It may be placed on the devices of our customers' End Users to identify individual clients behind a shared IP address and apply security settings on a per-client basis. It is necessary for supporting Cloudflare's security features.
+**Name**\: \_cfduid<br>**Services**\: The \_cfduid cookie is provided by Cloudflare and helps it detect malicious visitors to our Customers’ websites and minimizes blocking legitimate users. It may be placed on the devices of our customers' End Users to identify individual clients behind a shared IP address and apply security settings on a per-client basis. It is necessary for supporting Cloudflare's security features.
 
 ## Third-party cookies
 
@@ -93,7 +93,7 @@ You can set most modern browsers to prevent any cookies being placed on your dev
 
 ### Opting out of all of log-analytics
 
-(if you can't see a dialogue box here, you are already opted out by your browser and/or any of it's add-ons)<br><br>
+(if you can't see a dialogue box here, you are already opted out by your browser and/or any of it's add-ons)<br>&nbsp;
 
 <iframe style="border: 0; height: 300px; width: 300px;" src="https://terminalnetwork.matomo.cloud/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=en&amp;backgroundColor=000000&amp;fontColor=ffffff&amp;fontSize=&amp;fontFamily=sans-serif"></iframe>
 
