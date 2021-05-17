@@ -42,7 +42,9 @@ When I am not working, I spend most of my time editing video, wiring my synthesi
 
 ### **EXECUTIVE EXPERIENCE**
 
-* Web Developer for [Cuttlefish.se](https://www.cuttlefish.se/){: target="_blank"} Part time (Stockholm 2019-Present).
+* Web Designer for [Hodling.ch](https://www.hodling.ch){: target="_blank" rel="noopener"} Part time (Stockholm 2021-Present).
+* Web Designer for Squared Circle Security \[website pending publication\] (Stockholm 2021-Present).
+* Web Developer for [Cuttlefish.se](https://www.cuttlefish.se/){: target="_blank"} Part time (Stockholm 2019-2020).
 * Web Developer for [Seeqest,](https://www.seeqest.com/){: target="_blank"}Part time (Stockholm 2019-2020).
 * Web Developer for [Momangen.se](https://www.momangen.se/) Part time (Stockholm 2019-2020).
 * Web Developer for [En Renare Vardag AB,](https://enrenarevardag.se/)Part time (Stockholm 2019-Present).
